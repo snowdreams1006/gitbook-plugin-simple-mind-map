@@ -1,4 +1,5 @@
 # Welcome to gitbook-plugin-readmore 👋
+
 [![Version](https://img.shields.io/npm/v/gitbook-plugin-readmore.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
 ![Prerequisite](https://img.shields.io/badge/gitbook-%3E%3D2.4.3-blue.svg)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/snowdreams1006/gitbook-plugin-readmore#readme)
@@ -47,6 +48,3 @@ Give a ⭐️ if this project helped you!
 Copyright © 2019 [snowdreams1006](https://github.com/snowdreams1006).
 
 This project is [MIT](https://github.com/snowdreams1006/gitbook-plugin-readmore/blob/master/LICENSE) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
