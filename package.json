@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-readmore",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gitbook整合 OpenWrite 平台的 readmore 插件,为每一篇文章添加阅读更多效果,需要关注公众号解锁全站文章,从而实现博客流量导流到微信公众号.",
   "main": "index.js",
   "engines": {
