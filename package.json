@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "gitbook-plugin-readmore",
   "main": "index.js",
+  "engines": {
+    "gitbook": ">=2.4.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +18,9 @@
     "gitbook-plugin-openwrite",
     "readmore",
     "openwrite",
-    "vip"
+    "vip",
+    "github",
+    "opensource"
   ],
   "author": {
     "name": "snowdreams1006",
