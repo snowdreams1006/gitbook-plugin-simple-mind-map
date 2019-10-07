@@ -1,0 +1,56 @@
+{
+    "title": "gitbook-plugin-openwrite",
+    "author": "snowdreams1006",
+    "description": "gitbook-plugin-openwrite官方文档",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "links": {
+        "sidebar": {
+            "snowdreams1006": "https://snowdreams1006.github.io/"
+        }
+    },
+    "plugins": [
+        "favicon-custom",
+        "github-buttons",
+        "edit-link",
+        "openwrite",
+        "copyright",
+        "mygitalk"
+    ],
+    "pluginsConfig": {
+        "favicon": "favicon.ico",
+        "appleTouchIconPrecomposed152": "apple-touch-icon-precomposed-152.png",
+        "github-buttons": {
+            "buttons": [{
+                "user": "snowdreams1006",
+                "repo": "gitbook-plugin-openwrite",
+                "type": "star",
+                "size": "small"
+            }]
+        },
+        "edit-link": {
+            "base": "https://github.com/snowdreams1006/gitbook-plugin-openwrite/blob/master",
+            "label": "Edit This Page"
+        },
+        "openwrite": {
+            "blogId": "15702-1569305559839-744",
+            "name": "雪之梦技术驿站",
+            "qrcode": "https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg",
+            "keyword": "vip"
+        },
+        "copyright": {
+            "site": "https://snowdreams1006.github.io/gitbook-plugin-openwrite",
+            "author": "雪之梦技术驿站",
+            "website": "雪之梦技术驿站",
+            "image": "https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"
+        },
+        "mygitalk": {
+            "clientID": "3f62415a283d19cbd696",
+            "clientSecret": "aed0e1db0620bf5d0e3a3f0225f801997ad74e58",
+            "repo": "gitbook-plugin-openwrite",
+            "owner": "snowdreams1006",
+            "admin": ["snowdreams1006"],
+            "distractionFreeMode": false
+        }
+    }
+}

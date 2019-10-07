@@ -1,0 +1,25 @@
+{% extends template.self %}
+
+{% block page %}
+<div id="vip-container">
+    {{ page.content|safe }}
+</div>
+{% endblock %}
+
+{% block javascript %}
+{{ super() }}
+<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+if (!isMobile) {
+    var btw = new BTWPlugin();
+    btw.init({
+        "id": "vip-container",
+        "blogId": "{{ config.pluginsConfig.readmore.blogId }}",
+        "name": "{{ config.pluginsConfig.readmore.name }}",
+        "qrcode": "{{ config.pluginsConfig.readmore.qrcode }}",
+        "keyword": "{{ config.pluginsConfig.readmore.keyword }}"
+    });
+}
+</script>
+{% endblock %}
