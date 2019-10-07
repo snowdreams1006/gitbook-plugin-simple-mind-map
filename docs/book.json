@@ -1,7 +1,7 @@
 {
-    "title": "gitbook-plugin-openwrite",
+    "title": "readmore 插件官方文档",
     "author": "snowdreams1006",
-    "description": "gitbook-plugin-openwrite官方文档",
+    "description": "gitbook-plugin-readmore 插件官方文档",
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "links": {
@@ -13,7 +13,7 @@
         "favicon-custom",
         "github-buttons",
         "edit-link",
-        "openwrite",
+        "readmore",
         "copyright",
         "mygitalk"
     ],
@@ -23,23 +23,23 @@
         "github-buttons": {
             "buttons": [{
                 "user": "snowdreams1006",
-                "repo": "gitbook-plugin-openwrite",
+                "repo": "gitbook-plugin-readmore",
                 "type": "star",
                 "size": "small"
             }]
         },
         "edit-link": {
-            "base": "https://github.com/snowdreams1006/gitbook-plugin-openwrite/blob/master",
-            "label": "Edit This Page"
+            "base": "https://github.com/snowdreams1006/gitbook-plugin-readmore/blob/master",
+            "label": "编辑本页"
         },
-        "openwrite": {
+        "readmore": {
             "blogId": "15702-1569305559839-744",
             "name": "雪之梦技术驿站",
             "qrcode": "https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg",
             "keyword": "vip"
         },
         "copyright": {
-            "site": "https://snowdreams1006.github.io/gitbook-plugin-openwrite",
+            "site": "https://snowdreams1006.github.io/gitbook-plugin-readmore",
             "author": "雪之梦技术驿站",
             "website": "雪之梦技术驿站",
             "image": "https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"
@@ -47,7 +47,7 @@
         "mygitalk": {
             "clientID": "3f62415a283d19cbd696",
             "clientSecret": "aed0e1db0620bf5d0e3a3f0225f801997ad74e58",
-            "repo": "gitbook-plugin-openwrite",
+            "repo": "gitbook-plugin-readmore",
             "owner": "snowdreams1006",
             "admin": ["snowdreams1006"],
             "distractionFreeMode": false
