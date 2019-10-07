@@ -34,9 +34,6 @@
       }
     }
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snowdreams1006/gitbook-plugin-readmore.git"
@@ -58,5 +55,5 @@
   "bugs": {
     "url": "https://github.com/snowdreams1006/gitbook-plugin-readmore/issues"
   },
-  "homepage": "https://github.com/snowdreams1006/gitbook-plugin-readmore#readme"
+  "homepage": "https://snowdreams1006.github.io/gitbook-plugin-readmore/"
 }
