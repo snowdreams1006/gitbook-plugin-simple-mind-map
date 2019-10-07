@@ -10,15 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/snowdreams1006/gitbook-plugin-readmore.git"
   },
-  "keywords": ["gitbook-plugin-readmore","gitbook-plugin-openwrite","readmore","openwrite","vip"],
-  "author": "",
+  "keywords": [
+    "gitbook-plugin-readmore",
+    "gitbook-plugin-openwrite",
+    "readmore",
+    "openwrite",
+    "vip"
+  ],
+  "author": {
+    "name": "snowdreams1006",
+    "email": "snowdreams1006@163.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/snowdreams1006/gitbook-plugin-readmore/issues"
   },
   "homepage": "https://github.com/snowdreams1006/gitbook-plugin-readmore#readme"
 }
-
-
-
-
