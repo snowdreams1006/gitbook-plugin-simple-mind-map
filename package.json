@@ -6,6 +6,34 @@
   "engines": {
     "gitbook": ">=2.4.3"
   },
+  "gitbook": {
+    "properties": {
+      "blogId": {
+        "type": "string",
+        "required": true,
+        "title":"博客id",
+        "description": "OpenWrite 后台申请的博客唯一标识,例如:15702-1569305559839-744"
+      },
+      "name": {
+        "type": "string",
+        "required": true,
+        "title":"博客名称",
+        "description": "OpenWrite 后台申请的博客名称,例如:雪之梦技术驿站"
+      },
+      "qrcode": {
+        "type": "string",
+        "required": true,
+        "title":"微信公众号二维码",
+        "description": "OpenWrite 后台申请的微信公众号二维码,例如:https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg"
+      },
+      "keyword": {
+        "type": "string",
+        "required": true,
+        "title":"微信公众号回复关键字",
+        "description": "OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip"
+      }
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
