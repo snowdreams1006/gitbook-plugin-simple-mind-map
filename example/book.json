@@ -1,7 +1,7 @@
 {
     "title": "readmore 插件官方简单示例",
     "author": "snowdreams1006",
-    "description": "gitbook-plugin-openwrite 插件官方简单示例",
+    "description": "gitbook-plugin-readmore 插件官方简单示例",
     "plugins": [
         "readmore"
     ],
