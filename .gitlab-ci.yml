@@ -7,6 +7,6 @@ pages:
     - tar -zxvf ./public.tar.gz -C ./public
   artifacts:
     paths:
-      - public
+      - docs/public
   only:
     - master
