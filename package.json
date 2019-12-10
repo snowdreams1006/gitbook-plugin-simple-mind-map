@@ -8,6 +8,16 @@
   },
   "gitbook": {
     "properties": {
+      "allowDomain": {
+        "type": [
+          "string",
+          "object"
+        ],
+        "required": false,
+        "default": "localhost",
+        "title": "允许域名",
+        "description": "允许域名生效,例如:localhost"
+      },
       "blogId": {
         "type": "string",
         "required": true,

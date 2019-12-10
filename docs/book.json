@@ -10,16 +10,28 @@
         }
     },
     "plugins": [
-        "favicon-custom",
+        "favicon-absolute",
         "github-buttons",
-        "edit-link",
+        "edit-link-plus",
         "readmore",
         "copyright",
         "mygitalk"
     ],
     "pluginsConfig": {
-        "favicon": "favicon.ico",
-        "appleTouchIconPrecomposed152": "apple-touch-icon-precomposed-152.png",
+        "favicon-absolute": {
+            "favicon": "/favicon.ico",
+            "bookmark": "/bookmark.ico",
+            "appleTouchIcon152": "/apple-touch-icon-152.png",
+            "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png",
+            "appleTouchIconMore": {
+                "120x120": "/apple-touch-icon-120.png",
+                "180x180": "/apple-touch-icon-180.png"
+            },
+            "appleTouchIconPrecomposedMore": {
+                "120x120": "/apple-touch-icon-precomposed-120.png",
+                "180x180": "/apple-touch-icon-precomposed-180.png"
+            }
+        },
         "github-buttons": {
             "buttons": [{
                 "user": "snowdreams1006",
@@ -28,11 +40,12 @@
                 "size": "small"
             }]
         },
-        "edit-link": {
+        "edit-link-plus": {
             "base": "https://github.com/snowdreams1006/gitbook-plugin-readmore/blob/master",
             "label": "编辑本页"
         },
         "readmore": {
+            "allowDomain":["localhost"],
             "blogId": "15702-1569305559839-744",
             "name": "雪之梦技术驿站",
             "qrcode": "https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg",

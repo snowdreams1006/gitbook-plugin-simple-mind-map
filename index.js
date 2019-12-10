@@ -18,10 +18,32 @@ module.exports = {
                 </div>
                 <script src="https://my.openwrite.cn/js/readmore.js"></script>
                 <script>
-                    var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-                    if (!isMobile) {
-                        var btw = new BTWPlugin();
-                        btw.init(${JSON.stringify(readmoreConfig)});
+                    var enablePlugin = false;
+                    var allowDomain = "${readmoreConfig.allowDomain}";
+                    if(allowDomain){
+                        var currentDomain = location.hostname;
+                        if (typeof allowDomain === 'object') {
+                            $.each(allowDomain, function(index, item) {
+                                if (currentDomain == item) {
+                                    enablePlugin = true;
+                                    return false;
+                                }
+                            });
+                        }else{
+                           if (currentDomain == allowDomain) {
+                                enablePlugin = true;
+                            }
+                        }
+                    }else{
+                        enablePlugin = true;
+                    }
+                    
+                    if(enablePlugin){
+                        var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+                        if (!isMobile) {
+                            var btw = new BTWPlugin();
+                            btw.init(${JSON.stringify(readmoreConfig)});
+                        }
                     }
                 </script>`;
 
