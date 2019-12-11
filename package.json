@@ -11,7 +11,7 @@
       "allowDomain": {
         "type": [
           "string",
-          "object"
+          "array"
         ],
         "required": false,
         "default": "localhost",

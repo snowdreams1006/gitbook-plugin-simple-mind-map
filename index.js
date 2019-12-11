@@ -19,10 +19,10 @@ module.exports = {
                 <script src="https://my.openwrite.cn/js/readmore.js"></script>
                 <script>
                     var enablePlugin = false;
-                    var allowDomain = "${readmoreConfig.allowDomain}";
+                    var allowDomain = ${JSON.stringify(readmoreConfig.allowDomain)};
                     if(allowDomain){
                         var currentDomain = location.hostname;
-                        if (typeof allowDomain === 'object') {
+                        if ($.isArray(allowDomain)) {
                             $.each(allowDomain, function(index, item) {
                                 if (currentDomain == item) {
                                     enablePlugin = true;
