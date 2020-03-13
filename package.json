@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-plugin-mind-map",
+  "name": "gitbook-plugin-simple-mind-map",
   "version": "0.0.1",
   "description": "A gitBook plugin for generating and exporting mind map within markdown",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snowdreams1006/gitbook-plugin-mind-map.git"
+    "url": "git+https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map.git"
   },
   "keywords": [
-    "gitbook-plugin-mind-map",
+    "gitbook-plugin-simple-mind-map",
     "gitbook-plugin",
-    "mind-map",
+    "simple-mind-map",
     "mindmap",
     "markdown",
     "svg",
@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/snowdreams1006/gitbook-plugin-mind-map/issues"
+    "url": "https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/issues"
   },
-  "homepage": "https://snowdreams1006.github.io/gitbook-plugin-mind-map/"
+  "homepage": "https://snowdreams1006.github.io/gitbook-plugin-simple-mind-map/"
 }
