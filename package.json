@@ -1,7 +1,7 @@
 {
   "name": "gitbook-plugin-mind-map",
   "version": "0.0.1",
-  "description": "A GitBook plugin for generating and exporting mind map within markdown",
+  "description": "A gitBook plugin for generating and exporting mind map within markdown",
   "main": "index.js",
   "engines": {
     "gitbook": "*"
@@ -12,10 +12,12 @@
   },
   "keywords": [
     "gitbook-plugin-mind-map",
+    "gitbook-plugin",
     "mind-map",
     "mindmap",
     "markdown",
-    "markmap"
+    "svg",
+    "canvas"
   ],
   "author": {
     "name": "snowdreams1006",
