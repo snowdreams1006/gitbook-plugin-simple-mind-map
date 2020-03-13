@@ -23,26 +23,10 @@ _book
 package-lock.json
 
 ## Dependency directory
-docs/node_modules
-
-# Book build output
-docs/_book
-
-# eBook build output
-docs/*.epub
-docs/*.mobi
-docs/*.pdf
+docs/
 
 ## Dependency directory
-example/node_modules
-
-# Book build output
-example/_book
-
-# eBook build output
-example/*.epub
-example/*.mobi
-example/*.pdf
+example/
 
 ### macOS ###
 # General
