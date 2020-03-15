@@ -21,6 +21,12 @@
   ],
   "gitbook": {
     "properties": {
+      "type": {
+        "type": "string",
+        "title": "Markdown or MindMup or Txtmap or Pandoc",
+        "required": false,
+        "default": "markdown"
+      },
       "preset": {
         "type": "string",
         "title": "colorful or default",
