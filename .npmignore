@@ -23,10 +23,10 @@ _book
 package-lock.json
 
 ## Dependency directory
-docs/
+docs
 
 ## Dependency directory
-example/
+examples
 
 ### macOS ###
 # General

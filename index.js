@@ -1,6 +1,6 @@
 /*
  *  ===============================================================
- *                      Not just programmers
+ *      snowdreams1006 is not just for programmers
  *  ===============================================================
  *
  *  - Document: index.js
@@ -8,7 +8,6 @@
  *  - Description: Gitbook plugin index
  *  - Create Time: 2020-03-15
  */
-
 module.exports = {
     book: {
         assets: './assets',
