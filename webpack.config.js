@@ -10,14 +10,25 @@
  */
 
 const path = require('path');
-
 module.exports = {
   entry: './src/plugin.js',
   mode: 'development',
+  devtool: 'inline-source-map',
   output: {
     filename: 'plugin.min.js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
+  module: {
+     rules: [
+       {
+         test: /\.css$/,
+         use: [
+           'style-loader',
+           'css-loader'
+         ]
+       }
+     ]
+   }
 };
 
 // const path = require('path');
