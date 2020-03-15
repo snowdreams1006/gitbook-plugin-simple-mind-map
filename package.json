@@ -2,7 +2,13 @@
     "name": "gitbook-plugin-simple-mind-map",
     "version": "0.0.2",
     "description": "A gitBook plugin for generating and exporting mind map within markdown",
+    "private": true,
     "main": "index.js",
+    "scripts": {
+        "start": "webpack --config webpack.config.js",
+        "dev": "webpack --colors --watch",
+        "prod": "webpack --colors"
+    },
     "engines": {
         "gitbook": "*"
     },
@@ -72,6 +78,7 @@
         "markmap": "^0.6.1"
     },
     "devDependencies": {
+        "mini-css-extract-plugin": "^0.9.0",
         "webpack": "^4.42.0",
         "webpack-cli": "^3.3.11"
     }
