@@ -30,29 +30,31 @@
 // const parse = require('markmap/lib/parse.markdown');
 // const transform = require('markmap/lib/transform.headings');
 
-require(["gitbook","jQuery"], function(gitbook, $) {
-    var entry = function entry() {
-        $("svg.simple-mind-map").each(function () {
-          var $svg = $(this);
+console.log("plugin.js");
 
-          var pluginConfig = $svg.data("plugin-config") || {};
-          console.log(pluginConfig);
+// require(["gitbook","jQuery"], function(gitbook, $) {
+//     var entry = function entry() {
+//         $("svg.simple-mind-map").each(function () {
+//           var $svg = $(this);
 
-          var blockConfig = $svg.data("block-config") || {};
-          console.log(blockConfig);
+//           var pluginConfig = $svg.data("plugin-config") || {};
+//           console.log(pluginConfig);
 
-          var text = $svg.data("svg-text");
-          text = JSON.parse(text);
-          console.log(text);
+//           var blockConfig = $svg.data("block-config") || {};
+//           console.log(blockConfig);
 
-          // var data = transform(parse(text));
-          // markmap($svg[0], data, {
-          //   preset: 'colorful',
-          //   linkShape: 'diagonal'
-          // });
-        });
-    };
+//           var text = $svg.data("svg-text");
+//           text = JSON.parse(text);
+//           console.log(text);
 
-    gitbook.events.bind("start",entry);
-    gitbook.events.bind("page.change", entry);
-});
+//           // var data = transform(parse(text));
+//           // markmap($svg[0], data, {
+//           //   preset: 'colorful',
+//           //   linkShape: 'diagonal'
+//           // });
+//         });
+//     };
+
+//     gitbook.events.bind("start",entry);
+//     gitbook.events.bind("page.change", entry);
+// });
