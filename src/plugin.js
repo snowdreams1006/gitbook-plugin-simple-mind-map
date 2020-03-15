@@ -30,7 +30,11 @@ var entry = function entry() {
       text = JSON.parse(text);
       console.log(text);
 
+
+      console.log(parse(text));
       var data = transform(parse(text));
+      console.log(data);
+
       markmap($svg[0], data, {
         preset: 'colorful',
         linkShape: 'diagonal'
