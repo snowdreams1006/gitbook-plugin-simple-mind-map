@@ -9,34 +9,9 @@
  *  - Create Time: 2020-03-15
  */
 
-const reg = /^\s*```\s{0,4}mind(?::(.+))?((.*[\r\n]+)+?)?\s*```$/im;
-const escapeHTML = str => str.replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-
-const handler = page => {
-    this.log.debug.ln("page:before", this.options.pluginsConfig["simple-mind-map"]);
-
-    // let result;
-
-    // while ((result = reg.exec(page.content))) {
-    //     const [block, conditions, content] = result;
-    //     const {height, color, title} = (conditions || '').split(',').reduce((obj, cond) => {
-    //         const [key, value] = cond.split('=');
-    //         obj[key] = value || true;
-    //         return obj;
-    //     }, {});
-
-    //     page.content = page.content.replace(block, `<p class="mindmaps-wrapper" align="center"><svg
-    //         style="${height ? `height: ${height}px` : ''}"
-    //         class="mindmaps" ${color ? 'color="true"' : ''}
-    //         data-content="${escapeHTML(JSON.stringify(content))}"></svg>
-    //         ${title ? `<p align="center">${title}</p>` : ''}</p>`);
-    // }
-
-    return page;
+var regex = /^\s*```\s{0,4}(?:Markdown|MindMup|Txtmap|Pandoc|md|json|mup|txtmap|\s*).*((?:.*[\r\n]+)+)+?\s*```$/im;
+var escapeHTML = function escapeHTML(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 };
 
 module.exports = {
@@ -45,15 +20,27 @@ module.exports = {
         css: ["plugin.css"],
         js: ["plugin.js"],
     },
-    hooks: {
-        "page:before": handler
-    },
     blocks: {
         simplemindmap: {
             process: function process(block) {
-                console.log(block.body)
-                console.log(block.args)
-                console.log(block.kwargs)
+                var pluginConfig = this.options.pluginsConfig["simple-mind-map"] || {};
+                pluginConfig = JSON.stringify(pluginConfig);
+                console.log(pluginConfig);
+
+                var blockConfig = block;
+                blockConfig = JSON.stringify(blockConfig);
+                console.log(blockConfig);
+
+                // console.log("simplemindmap:process",simplemindmapConfig);
+
+                // console.log("simplemindmap:process",block);
+
+                var rawBody = block.body;
+                var result,text;
+                if ((result = regex.exec(rawBody)) !== null) {
+                    text = escapeHTML(JSON.stringify(result[1]));
+                }
+                block.body = '<svg class="simple-mind-map" data-plugin-config="'+(pluginConfig)+'" data-block-config="'+(blockConfig)+'" data-svg-text="'+(text)+'"></svg>';
 
                 return block;
             }
