@@ -1,74 +1,74 @@
 {
-  "name": "gitbook-plugin-simple-mind-map",
-  "version": "0.0.1",
-  "description": "A gitBook plugin for generating and exporting mind map within markdown",
-  "main": "index.js",
-  "engines": {
-    "gitbook": "*"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map.git"
-  },
-  "keywords": [
-    "gitbook-plugin-simple-mind-map",
-    "gitbook-plugin",
-    "simple-mind-map",
-    "visualization",
-    "mindmap",
-    "ideamap",
-    "markdown",
-    "svg",
-    "canvas"
-  ],
-  "gitbook": {
-    "properties": {
-      "type": {
-        "type": "string",
-        "title": "Markdown or MindMup or Txtmap or Pandoc",
-        "required": false,
-        "default": "markdown"
-      },
-      "title": {
-        "type": "string",
-        "title": "title",
-        "required": false,
-      },
-      "preset": {
-        "type": "string",
-        "title": "colorful or default",
-        "required": false,
-        "default": "default"
-      },
-      "linkShape": {
-        "type": "string",
-        "title": "diagonal or bracket",
-        "required": false,
-        "default": "diagonal"
-      },
-      "autoFit": {
-        "type": "boolean",
-        "title": "true or false",
-        "required": false,
-        "default": true
-      },
-      "style": {
-        "type": "object",
-        "title": "svg style",
-        "required": false
-      }
+    "name": "gitbook-plugin-simple-mind-map",
+    "version": "0.0.1",
+    "description": "A gitBook plugin for generating and exporting mind map within markdown",
+    "main": "index.js",
+    "engines": {
+        "gitbook": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map.git"
+    },
+    "keywords": [
+        "gitbook-plugin-simple-mind-map",
+        "gitbook-plugin",
+        "simple-mind-map",
+        "visualization",
+        "mindmap",
+        "ideamap",
+        "markdown",
+        "svg",
+        "canvas"
+    ],
+    "gitbook": {
+        "properties": {
+            "type": {
+                "type": "string",
+                "title": "Markdown or MindMup or Txtmap or Pandoc",
+                "required": false,
+                "default": "markdown"
+            },
+            "title": {
+                "type": "string",
+                "title": "title",
+                "required": false
+            },
+            "preset": {
+                "type": "string",
+                "title": "colorful or default",
+                "required": false,
+                "default": "default"
+            },
+            "linkShape": {
+                "type": "string",
+                "title": "diagonal or bracket",
+                "required": false,
+                "default": "diagonal"
+            },
+            "autoFit": {
+                "type": "boolean",
+                "title": "true or false",
+                "required": false,
+                "default": true
+            },
+            "style": {
+                "type": "object",
+                "title": "svg style",
+                "required": false
+            }
+        }
+    },
+    "author": {
+        "name": "snowdreams1006",
+        "email": "snowdreams1006@163.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/issues"
+    },
+    "homepage": "https://snowdreams1006.github.io/gitbook-plugin-simple-mind-map/",
+    "dependencies": {
+        "markmap": "^0.6.1"
     }
-  },
-  "author": {
-    "name": "snowdreams1006",
-    "email": "snowdreams1006@163.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/issues"
-  },
-  "homepage": "https://snowdreams1006.github.io/gitbook-plugin-simple-mind-map/",
-  "dependencies": {
-    "markmap": "^0.6.1"
-  }
 }
