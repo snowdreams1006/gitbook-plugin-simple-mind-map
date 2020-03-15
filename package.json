@@ -1,6 +1,6 @@
 {
     "name": "gitbook-plugin-simple-mind-map",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A gitBook plugin for generating and exporting mind map within markdown",
     "private": true,
     "main": "index.js",
