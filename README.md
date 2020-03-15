@@ -10,9 +10,22 @@ npm install --save lodash
 
 > npm install --save-dev
 
-```
+```bash
 npx webpack
 ```
+
+> npx webpack --config webpack.config.js
+
+```json
+"scripts": {
+    "start": "npx webpack --config webpack.config.js",
+    "dev": "npx webpack --colors --watch",
+    "prod": "npx webpack --colors",
+    "build": "npx webpack"
+}
+```
+
+> npm run build
 
 ## reference
 

@@ -5,9 +5,10 @@
     "private": true,
     "main": "index.js",
     "scripts": {
-        "start": "webpack --config webpack.config.js",
-        "dev": "webpack --colors --watch",
-        "prod": "webpack --colors"
+        "start": "npx webpack --config webpack.config.js",
+        "dev": "npx webpack --colors --watch",
+        "prod": "npx webpack --colors",
+        "build": "npx webpack"
     },
     "engines": {
         "gitbook": "*"
