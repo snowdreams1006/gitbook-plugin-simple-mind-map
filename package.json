@@ -27,6 +27,11 @@
         "required": false,
         "default": "markdown"
       },
+      "title": {
+        "type": "string",
+        "title": "title",
+        "required": false,
+      },
       "preset": {
         "type": "string",
         "title": "colorful or default",
