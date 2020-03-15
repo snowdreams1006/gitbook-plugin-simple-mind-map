@@ -16,30 +16,25 @@ var escapeHTML = function escapeHTML(str) {
 
 module.exports = {
     book: {
-        assets: "./assets",
-        css: ["plugin.css"],
-        js: ["plugin.js"],
+        assets: "./dist",
+        css: ["plugin.min.css"],
+        js: ["plugin.min.js"],
     },
     blocks: {
         simplemindmap: {
             process: function process(block) {
                 var pluginConfig = this.options.pluginsConfig["simple-mind-map"] || {};
-                pluginConfig = JSON.stringify(pluginConfig);
-                console.log(pluginConfig);
+                pluginConfig = escapeHTML(JSON.stringify(pluginConfig));
 
                 var blockConfig = block;
-                blockConfig = JSON.stringify(blockConfig);
-                console.log(blockConfig);
-
-                // console.log("simplemindmap:process",simplemindmapConfig);
-
-                // console.log("simplemindmap:process",block);
+                blockConfig = escapeHTML(JSON.stringify(blockConfig));
 
                 var rawBody = block.body;
                 var result,text;
                 if ((result = regex.exec(rawBody)) !== null) {
                     text = escapeHTML(JSON.stringify(result[1]));
                 }
+                
                 block.body = '<svg class="simple-mind-map" data-plugin-config="'+(pluginConfig)+'" data-block-config="'+(blockConfig)+'" data-svg-text="'+(text)+'"></svg>';
 
                 return block;

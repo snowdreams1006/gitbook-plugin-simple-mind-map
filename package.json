@@ -70,5 +70,9 @@
     "homepage": "https://snowdreams1006.github.io/gitbook-plugin-simple-mind-map/",
     "dependencies": {
         "markmap": "^0.6.1"
+    },
+    "devDependencies": {
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.11"
     }
 }
