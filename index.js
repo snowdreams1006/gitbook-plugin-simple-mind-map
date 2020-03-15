@@ -18,8 +18,18 @@ module.exports = {
     hooks: {
         "page:before": function(page) {
             this.log.debug.ln("init", this.options.pluginsConfig["simple-mind-map"]);
-
         }
-    }
+    },
+    blocks: {
+        simplemindmap: {
+            process: function process(block) {
+                console.log(block.body)
+                console.log(block.args)
+                console.log(block.kwargs)
 
+
+                return block;
+            }
+        }
+  }
 };
