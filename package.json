@@ -14,7 +14,9 @@
     "gitbook-plugin-simple-mind-map",
     "gitbook-plugin",
     "simple-mind-map",
+    "visualization",
     "mindmap",
+    "ideamap",
     "markdown",
     "svg",
     "canvas"
@@ -36,7 +38,7 @@
         "type": "string",
         "title": "colorful or default",
         "required": false,
-        "default": "colorful"
+        "default": "default"
       },
       "linkShape": {
         "type": "string",

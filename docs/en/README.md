@@ -20,7 +20,7 @@
 
 ## Screenshot
 
-{% simplemindmap type=markdown,title=正则表达式目录,color=colorful %}
+{% simplemindmap title="正则表达式目录",color="colorful" %}
 ```markdown
 # 目录
 

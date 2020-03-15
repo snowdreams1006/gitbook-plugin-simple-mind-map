@@ -27,7 +27,6 @@ module.exports = {
                 console.log(block.args)
                 console.log(block.kwargs)
 
-
                 return block;
             }
         }
