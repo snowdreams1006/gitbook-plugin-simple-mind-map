@@ -34,16 +34,15 @@ var entry = function entry() {
       var text = $svg.data("svg-text");
       console.log("text",text);
 
-      if(text){
-        text = JSON.parse(text);
-      }
-      console.log("text",text);
-
       var data;
       switch (type) {
           case "markdown":
             var parse = require("markmap/lib/parse.markdown");
             var transform = require("markmap/lib/transform.headings");
+
+            if(text){
+              text = JSON.parse(text);
+            }
 
             data = transform(parse(text));
             break; 
@@ -58,6 +57,10 @@ var entry = function entry() {
           case "txtmap":
               var parse = require("markmap/lib/parse.txtmap");
               var transform = require("markmap/lib/transform.headings");
+
+              if(text){
+                text = JSON.parse(text);
+              }
 
               data = transform(parse(text));
               break; 
