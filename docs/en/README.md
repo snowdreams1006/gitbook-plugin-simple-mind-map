@@ -82,63 +82,85 @@ In addition, the supported configuration options are as follows :
 
 ### Step #2 - Use in markdown file
 
-- markdown 
+`simplemindmap` support `type`,`preset`,`linkShape`,`autoFit` and `style` options for generating mind map.
+
+Here is basic grammar in your markdown file :
+
+````
+{% simplemindmap %}
+```
+simple mind map
+```
+{% endsimplemindmap %}
+````
+
+And there are some examples :
+
+- markdown
+
+> The example of using the default configuration to generate a `markdown` version of the mind map
 
 ````markdown
 {% simplemindmap %}
 ```markdown
-* [gitbook 入门教程](myGitbook/README.md)
-    * [准备阶段](myGitbook/preparation/prepare.md)
-        * [前置知识](myGitbook/preparation/front-knowledge.md)
-        * [环境要求](myGitbook/preparation/environmental-requirements.md)
-    * [快速体验](myGitbook/experience/preview.md)
-        * [gitbook-cli 命令行操作](myGitbook/experience/gitbook-cli.md)
-        * [gitbook-editor 编辑器操作](myGitbook/experience/gitbook-editor.md)
-        * [gitbook.com 官网操作](myGitbook/experience/gitbook-com.md)
-    * [高级进阶](myGitbook/advance/advance.md)
-        * [插件介绍](myGitbook/advance/plugin.md)
-            * [实用插件](myGitbook/advance/plugin-practical.md)
-            * [主题插件](myGitbook/advance/plugin-theme.md)
-            * [开发插件](myGitbook/advance/plugin-develop.md)
-        * [导出电子书](myGitbook/advance/export.md)
-        * [发布电子书](myGitbook/advance/publish.md)
-    * [公众号引流](myGitbook/openwrite/README.md)
-    * [优化搜索](myGitbook/seo/README.md)
-    * [常见问题](myGitbook/issue/README.md)
-        * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
-        * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
-    * [参考更多](myGitbook/reference/README.md)
+* simplemindmap
+    * config book.json
+        * plugins
+            * others
+            * simple-mind-map
+        * pluginsConfig
+            * others
+            * simple-mind-map
+                * type
+                * preset
+                * linkShape
+                * autoFit
+                * style
+    * custom file.md
+        * markdown
+            * type
+            * preset
+            * linkShape
+            * autoFit
+            * style
+        * txtmap
+        * json
+        * mindmup
 ```
 {% endsimplemindmap %}
 ````
 
 {% simplemindmap %}
 ```markdown
-* [gitbook 入门教程](myGitbook/README.md)
-    * [准备阶段](myGitbook/preparation/prepare.md)
-        * [前置知识](myGitbook/preparation/front-knowledge.md)
-        * [环境要求](myGitbook/preparation/environmental-requirements.md)
-    * [快速体验](myGitbook/experience/preview.md)
-        * [gitbook-cli 命令行操作](myGitbook/experience/gitbook-cli.md)
-        * [gitbook-editor 编辑器操作](myGitbook/experience/gitbook-editor.md)
-        * [gitbook.com 官网操作](myGitbook/experience/gitbook-com.md)
-    * [高级进阶](myGitbook/advance/advance.md)
-        * [插件介绍](myGitbook/advance/plugin.md)
-            * [实用插件](myGitbook/advance/plugin-practical.md)
-            * [主题插件](myGitbook/advance/plugin-theme.md)
-            * [开发插件](myGitbook/advance/plugin-develop.md)
-        * [导出电子书](myGitbook/advance/export.md)
-        * [发布电子书](myGitbook/advance/publish.md)
-    * [公众号引流](myGitbook/openwrite/README.md)
-    * [优化搜索](myGitbook/seo/README.md)
-    * [常见问题](myGitbook/issue/README.md)
-        * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
-        * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
-    * [参考更多](myGitbook/reference/README.md)
+* simplemindmap
+    * config book.json
+        * plugins
+            * others
+            * simple-mind-map
+        * pluginsConfig
+            * others
+            * simple-mind-map
+                * type
+                * preset
+                * linkShape
+                * autoFit
+                * style
+    * custom file.md
+        * markdown
+            * type
+            * preset
+            * linkShape
+            * autoFit
+            * style
+        * txtmap
+        * json
+        * mindmup
 ```
 {% endsimplemindmap %}
 
 - txtmap
+
+> The example of using the specified language type to generate a `txtmap` version of the mind map
 
 ````txtmap
 {% simplemindmap type="txtmap" %}
