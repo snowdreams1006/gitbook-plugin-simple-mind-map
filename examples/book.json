@@ -1,0 +1,19 @@
+{
+    "title": "simple-mind-map examples",
+    "author": "snowdreams1006",
+    "description": "gitbook-plugin-simple-mind-map examples",
+    "gitbook": "3.2.3",
+    "links": {
+        "sidebar": {
+            "blog": "https://snowdreams1006.tech/"
+        }
+    },
+    "plugins": [
+        "simple-mind-map"
+    ],
+    "pluginsConfig": {
+        "simple-mind-map": {
+            "type": "markdown"
+        }
+    }
+}
