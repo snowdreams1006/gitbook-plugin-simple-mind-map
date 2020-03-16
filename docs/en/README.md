@@ -32,20 +32,13 @@
 
 ### Step #1 - Update `book.json` file
 
-1. In you gitbook's `book.json` file, add `simple-mind-map` to `plugins` list.
-2. In `pluginsConfig`,Set the `number` value to your own simple-mind-map.
-3. In `pluginsConfig`,`label` or `link` value is NOT required.By default link url will be [http://www.beian.miit.gov.cn/](http://www.beian.miit.gov.cn/).
+In you gitbook's `book.json` file, add `simple-mind-map` to `plugins` list.
 
 Here is simplest example :
 
 ```json
 {
-    "plugins": ["simple-mind-map"],
-    "pluginsConfig": {
-        "simple-mind-map": {
-            "number": "浙simple-mind-map备18042346号"
-        }
-    }
+    "plugins": ["simple-mind-map"]
 }
 ```
 
@@ -53,174 +46,43 @@ In addition, the supported configuration options are as follows :
 
 ```json
 "gitbook": {
-  "properties": {
-    "label": {
-      "type": "string",
-      "title": "simple-mind-map label",
-      "required": false
-    },
-    "number": {
-      "type": "string",
-      "title": "simple-mind-map number",
-      "required": true
-    },
-    "link": {
-      "type": "string",
-      "title": "link url",
-      "required": false,
-      "default": "http://www.beian.miit.gov.cn/"
-    },
-    "style": {
-      "type": "object",
-      "title": "simple-mind-map number style",
-      "required": false
-    }
-  }
-}
-```
-
-### Step #2 - gitbook commands
-
-1. Run `gitbook install`. It will automatically install `simple-mind-map` gitbook plugin for your book. This is needed only once.
-
-```bash
-gitbook install
-```
-
-or you can run `npm install gitbook-plugin-simple-mind-map` to install locally.
-
-```bash
-npm install gitbook-plugin-simple-mind-map
-```
-
-2. Build your book (`gitbook build`) or serve (`gitbook serve`) as usual.
-
-```bash
-gitbook serve
-```
-
-## Example
-
-- Official documentation configuration file
-
-> [https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/docs/book.json](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/docs/book.json)
-
-```json
-{
-    "plugins": ["simple-mind-map"],
-    "pluginsConfig": {
-        "simple-mind-map": {
-            "number": "浙simple-mind-map备18042346号"
+    "properties": {
+        "type": {
+            "type": "string",
+            "title": "Markdown or MindMup or Txtmap or Pandoc",
+            "required": false,
+            "default": "markdown"
+        },
+        "preset": {
+            "type": "string",
+            "title": "colorful or default",
+            "required": false,
+            "default": "default"
+        },
+        "linkShape": {
+            "type": "string",
+            "title": "diagonal or bracket",
+            "required": false,
+            "default": "diagonal"
+        },
+        "autoFit": {
+            "type": "boolean",
+            "title": "true or false",
+            "required": false,
+            "default": true
+        },
+        "style": {
+            "type": "object",
+            "title": "custom style",
+            "required": false
         }
     }
 }
 ```
 
-- Official example configuration file
+### Step #2 - Use in markdown file
 
-> [https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/example/book.json](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/example/book.json)
-
-```json
-{
-    "plugins": ["simple-mind-map"],
-    "pluginsConfig": {
-        "simple-mind-map": {
-            "number": "浙simple-mind-map备18042346号"
-        }
-    }
-}
-```
-
-- Sample `book.json` file 
-
-```json
-{
-    "plugins": ["simple-mind-map"],
-    "pluginsConfig": {
-        "simple-mind-map": {
-            "number": "YOUR OWN simple-mind-map NUMBER"
-        }
-    }
-}
-```
-
-or you can add `label` to custom your label:
-
-```json
-{
-    "plugins": ["simple-mind-map"],
-    "pluginsConfig": {
-        "simple-mind-map": {
-            "label": "YOUR OWN simple-mind-map LABEL",
-            "number": "YOUR OWN simple-mind-map NUMBER"
-        }
-    }
-}
-```
-
-or you can add `link` to custom your link:
-
-```json
-{
-    "plugins": ["simple-mind-map"],
-    "pluginsConfig": {
-        "simple-mind-map": {
-            "label": "YOUR OWN simple-mind-map LABEL",
-            "number": "YOUR OWN simple-mind-map NUMBER",
-            "link":"YOUR OWN simple-mind-map LINK"
-        }
-    }
-}
-```
-
-or you can add `style` to custom your style of number:
-
-```json
-{
-    "plugins": ["simple-mind-map"],
-    "pluginsConfig": {
-        "simple-mind-map": {
-            "label": "YOUR OWN simple-mind-map LABEL",
-            "number": "YOUR OWN simple-mind-map NUMBER",
-            "link": "YOUR OWN simple-mind-map LINK",
-            "style": {
-              "color":  "#f72b07"
-            }
-        }
-    }
-}
-```
-
-**Note**: Above snippet can be used as complete `book.json` file, if your book doesn't have one yet.
-
-## Author
-
-👤 **snowdreams1006**
-
-- Website: [snowdreams1006.tech](https://snowdreams1006.tech/)
-- Github: [@snowdreams1006](https://github.com/snowdreams1006)
-- Email: [snowdreams1006@163.com](mailto:snowdreams1006@163.com)
-
-## Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/issues).
-
-## Show your support
-
-Give a [**Star**](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map) if this project helped you!
-
-## Copyright
-
-Copyright © 2019 [snowdreams1006](https://github.com/snowdreams1006).
-
-This project is [MIT](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/LICENSE) licensed.
-
-
-
-
-
-
-### markdown
+- markdown 
 
 ````markdown
 {% simplemindmap %}
@@ -276,9 +138,43 @@ This project is [MIT](https://github.com/snowdreams1006/gitbook-plugin-simple-mi
 ```
 {% endsimplemindmap %}
 
-### json
+- txtmap
 
+````txtmap
+{% simplemindmap type="txtmap" %}
+```txtmap
+some
+  example
+    content
+  for
+  you
+    to
+    see
+      the
+    file
+      structure
+```
+{% endsimplemindmap %}
 ````
+
+{% simplemindmap type="txtmap" %}
+```txtmap
+some
+  example
+    content
+  for
+  you
+    to
+    see
+      the
+    file
+      structure
+```
+{% endsimplemindmap %}
+
+- json
+
+````js
 {% simplemindmap type="json" %}
 ```json
 {
@@ -1050,7 +946,7 @@ This project is [MIT](https://github.com/snowdreams1006/gitbook-plugin-simple-mi
 ```
 {% endsimplemindmap %}
 
-### mindmup
+- mindmup
 
 ````mindmup
 {% simplemindmap type="mindmup" %}
@@ -1260,36 +1156,138 @@ This project is [MIT](https://github.com/snowdreams1006/gitbook-plugin-simple-mi
 ```
 {% endsimplemindmap %}
 
-### txtmap
+### Step #3 - Run gitbook commands
 
-````txtmap
-{% simplemindmap type="txtmap" %}
-```txtmap
-some
-  example
-    content
-  for
-  you
-    to
-    see
-      the
-    file
-      structure
-```
-{% endsimplemindmap %}
-````
+1. Run `gitbook install`. It will automatically install `simple-mind-map` gitbook plugin for your book. This is needed only once.
 
-{% simplemindmap type="txtmap" %}
-```txtmap
-some
-  example
-    content
-  for
-  you
-    to
-    see
-      the
-    file
-      structure
+```bash
+gitbook install
 ```
-{% endsimplemindmap %}
+
+or you can run `npm install gitbook-plugin-simple-mind-map` to install locally.
+
+```bash
+npm install gitbook-plugin-simple-mind-map
+```
+
+2. Build your book (`gitbook build`) or serve (`gitbook serve`) as usual.
+
+```bash
+gitbook serve
+```
+
+## Example
+
+- Official documentation configuration file
+
+> [https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/docs/book.json](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/docs/book.json)
+
+```json
+{
+    "plugins": ["simple-mind-map"],
+    "pluginsConfig": {
+        "simple-mind-map": {
+            "type": "markdown",
+            "preset": "colorful",
+            "linkShape": "diagonal",
+            "autoFit": true
+        }
+    }
+}
+```
+
+- Official example configuration file
+
+> [https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/example/book.json](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/example/book.json)
+
+```json
+{
+    "plugins": ["simple-mind-map"],
+    "pluginsConfig": {
+        "simple-mind-map": {
+            "preset": "default",
+            "linkShape": "bracket"
+        }
+    }
+}
+```
+
+- Sample `book.json` file 
+
+```json
+{
+    "plugins": ["simple-mind-map"]
+}
+```
+
+or you can set `type` as your default language type:
+
+```json
+{
+    "plugins": ["simple-mind-map"],
+    "pluginsConfig": {
+        "simple-mind-map": {
+            "type": "markdown"
+        }
+    }
+}
+```
+
+or you can set `preset` or `linkShape` and `autoFit` as your default settings:
+
+```json
+{
+    "plugins": ["simple-mind-map"],
+    "pluginsConfig": {
+        "simple-mind-map": {
+            "type": "markdown",
+            "preset": "colorful",
+            "linkShape": "diagonal",
+            "autoFit": true
+        }
+    }
+}
+```
+
+or you can add `style` to custom your style of mind map:
+
+```json
+{
+    "plugins": ["simple-mind-map"],
+    "pluginsConfig": {
+        "simple-mind-map": {
+            "type": "markdown",
+            "preset": "colorful",
+            "linkShape": "diagonal",
+            "autoFit": true,
+            "style": {
+              "color":  "#f72b07"
+            }
+        }
+    }
+}
+```
+
+**Note**: Above snippet can be used as complete `book.json` file, if your book doesn't have one yet.
+
+## Author
+
+👤 **snowdreams1006**
+
+- Website: [snowdreams1006.tech](https://snowdreams1006.tech/)
+- Github: [@snowdreams1006](https://github.com/snowdreams1006)
+- Email: [snowdreams1006@163.com](mailto:snowdreams1006@163.com)
+
+## Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/issues).
+
+## Show your support
+
+Give a [**Star**](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map) if this project helped you!
+
+## Copyright
+
+Copyright © 2019 [snowdreams1006](https://github.com/snowdreams1006).
+
+This project is [MIT](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/blob/master/LICENSE) licensed.
