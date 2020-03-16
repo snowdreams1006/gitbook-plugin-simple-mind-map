@@ -21,8 +21,10 @@ var entry = function entry() {
       var pluginConfig = $svg.data("plugin-config") || {};
       var blockConfig = $svg.data("block-config") || {};
       var simplemindmapConfig = Object.assign((pluginConfig || {}), (blockConfig.kwargs || {}));
-      var type = simplemindmapConfig.type || "markdown";
-      type =  type.toLocaleLowerCase();
+      var type = $svg.data("lang-type");
+      if(type){
+        type = type.toLocaleLowerCase();
+      }
       var text = $svg.data("svg-text");
       var data;
       switch (type) {
