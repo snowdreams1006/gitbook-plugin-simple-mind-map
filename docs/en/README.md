@@ -20,13 +20,37 @@
 
 ## Screenshot
 
-- multilingual
+````markdown
+{% simplemindmap %}
+```markdown
+* simplemindmap
+    * config book.json
+        * plugins
+            * others
+            * simple-mind-map
+        * pluginsConfig
+            * others
+            * simple-mind-map
+                * type
+                * preset
+                * linkShape
+                * autoFit
+                * style
+    * custom file.md
+        * markdown
+            * type
+            * preset
+            * linkShape
+            * autoFit
+            * style
+        * txtmap
+        * json
+        * mindmup
+```
+{% endsimplemindmap %}
+````
 
-![simple-mind-map-multilingual-index-use-preview.png](simple-mind-map-multilingual-index-use-preview.png)
-
-- monolingual
-
-![simple-mind-map-monolingual-index-use-preview.png](simple-mind-map-monolingual-index-use-preview.png)
+![simple-mind-map-index-use-preview.png](simple-mind-map-index-use-preview.png)
 
 ## Usage
 
