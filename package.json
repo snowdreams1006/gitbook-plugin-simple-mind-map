@@ -46,7 +46,7 @@
                 "type": "string",
                 "title": "diagonal or bracket",
                 "required": false,
-                "default": "bracket"
+                "default": "diagonal"
             },
             "autoFit": {
                 "type": "boolean",

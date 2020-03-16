@@ -98,7 +98,7 @@ And there are some examples :
 
 - markdown
 
-> The example of using the default configuration to generate a `markdown` version of the mind map
+> The example of using the `default` configuration to generate a `markdown` version of the mind map
 
 ````markdown
 {% simplemindmap %}
@@ -160,7 +160,7 @@ And there are some examples :
 
 - txtmap
 
-> The example of using the specified language type to generate a `txtmap` version of the mind map
+> The example of using the specified language `type` to generate a `txtmap` version of the mind map
 
 ````txtmap
 {% simplemindmap type="txtmap" %}
@@ -196,10 +196,10 @@ some
 
 - json
 
-> The example of using the specified language type and the specified style to generate a `json` version of the mind map
+> The example of using the specified `preset` and the specified `style` to generate a `json` version of the mind map
 
 ````js
-{% simplemindmap type="json",style={"height":"2000px"} %}
+{% simplemindmap type="json",preset="default",style={"height":"2000px"} %}
 ```json
 {
  "name": "flare",
@@ -585,7 +585,7 @@ some
 {% endsimplemindmap %}
 ````
 
-{% simplemindmap type="json",style={"height":"2000px"} %}
+{% simplemindmap type="json",preset="default",style={"height":"2000px"} %}
 ```json
 {
  "name": "flare",
@@ -972,10 +972,10 @@ some
 
 - mindmup
 
-> The example of using the specified preset or the specified linkShape to generate a `mindmup` version of the mind map
+> The example of using the specified `linkShape` to generate a `mindmup` version of the mind map
 
 ````mindmup
-{% simplemindmap type="mindmup",preset="default",linkShape="diagonal" %}
+{% simplemindmap type="mindmup",preset="default",linkShape="bracket" %}
 ```mindmup
 {
   "title": "MindMapping",
@@ -1079,7 +1079,7 @@ some
 {% endsimplemindmap %}
 ````
 
-{% simplemindmap type="mindmup",preset="default",linkShape="diagonal" %}
+{% simplemindmap type="mindmup",preset="default",linkShape="bracket" %}
 ```mindmup
 {
   "title": "MindMapping",
