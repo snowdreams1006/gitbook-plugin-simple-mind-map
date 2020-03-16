@@ -117,7 +117,13 @@
 * [一起回顾总结](review/README.md)
 ```
 
-{% simplemindmap style={height:750} %}
+```
+{% simplemindmap %}
+
+{% endsimplemindmap %}
+```
+
+{% simplemindmap %}
 ```markdown
 # 目录
 

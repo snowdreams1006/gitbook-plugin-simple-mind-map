@@ -24,7 +24,7 @@ module.exports = {
             process: function process(block) {
                 var pluginConfig = this.options.pluginsConfig["simple-mind-map"] || {};
                 var blockConfig = block || {};
-                var styleConfig = Object.assign(pluginConfig.style || {}, blockConfig.kwargs.style || {});
+                var styleConfig = Object.assign((pluginConfig.style || {}), (blockConfig.kwargs.style || {}));
                 var customStyle = '';
                 if(styleConfig){
                     for (var style in styleConfig) { 
