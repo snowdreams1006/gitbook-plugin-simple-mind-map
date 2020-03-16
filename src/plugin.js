@@ -17,22 +17,27 @@ var markmap = require("markmap/lib/view.mindmap");
 var entry = function entry() {
     $("svg.simple-mind-map").each(function () {
       var $svg = $(this);
-      console.log($svg[0]);
+      // console.log($svg[0]);
       
       var pluginConfig = $svg.data("plugin-config") || {};
-      console.log("pluginConfig",pluginConfig);
+      // console.log("pluginConfig",pluginConfig);
 
       var blockConfig = $svg.data("block-config") || {};
-      console.log("blockConfig",blockConfig);
+      // console.log("blockConfig",blockConfig);
 
       var simplemindmapConfig = Object.assign((pluginConfig || {}), (blockConfig.kwargs || {}));
-      console.log("simplemindmapConfig",simplemindmapConfig);
+      // console.log("simplemindmapConfig",simplemindmapConfig);
 
       var type = simplemindmapConfig.type && simplemindmapConfig.type.toLocaleLowerCase();
       console.log("type",type);
 
       var text = $svg.data("svg-text");
       console.log("text",text);
+
+      console.log("---------");
+      console.log(text);
+      console.log("---------");
+
 
       var data;
       switch (type) {
@@ -52,6 +57,15 @@ var entry = function entry() {
           case "mindmup":
               var transform = require("markmap/lib/transform.mindmup");
 
+              console.log("mindmup类型转换中...");
+              if(text){
+                text = JSON.parse(text);
+              }
+
+              console.log("==========");
+              console.log(text);
+              console.log("==========");
+
               data = transform(text);
               break; 
           case "txtmap":
@@ -66,6 +80,10 @@ var entry = function entry() {
               break; 
       }
       console.log("data",data);
+
+      console.log("********");
+      console.log(data);
+      console.log("********");
 
       if(data){
         markmap($svg[0], data, simplemindmapConfig);
