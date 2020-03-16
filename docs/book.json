@@ -75,9 +75,7 @@
         },
         "simple-mind-map": {
             "type": "markdown",
-            "preset": "colorful",
-            "linkShape": "diagonal",
-            "autoFit": true
+            "preset": "colorful"
         }
     }
 }

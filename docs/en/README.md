@@ -196,8 +196,10 @@ some
 
 - json
 
+> The example of using the specified language type and the specified style to generate a `json` version of the mind map
+
 ````js
-{% simplemindmap type="json" %}
+{% simplemindmap type="json",style={"height":"1500px"} %}
 ```json
 {
  "name": "flare",
@@ -583,7 +585,7 @@ some
 {% endsimplemindmap %}
 ````
 
-{% simplemindmap type="json" %}
+{% simplemindmap type="json",style={"height":"1500px"} %}
 ```json
 {
  "name": "flare",
@@ -970,8 +972,10 @@ some
 
 - mindmup
 
+> The example of using the specified preset or the specified linkShape to generate a `mindmup` version of the mind map
+
 ````mindmup
-{% simplemindmap type="mindmup" %}
+{% simplemindmap type="mindmup",preset="default",linkShape="diagonal" %}
 ```mindmup
 {
   "title": "MindMapping",
@@ -1075,7 +1079,7 @@ some
 {% endsimplemindmap %}
 ````
 
-{% simplemindmap type="mindmup" %}
+{% simplemindmap type="mindmup",preset="default",linkShape="diagonal" %}
 ```mindmup
 {
   "title": "MindMapping",
