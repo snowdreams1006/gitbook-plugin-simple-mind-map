@@ -199,7 +199,7 @@ some
 > The example of using the specified language type and the specified style to generate a `json` version of the mind map
 
 ````js
-{% simplemindmap type="json",style={"height":"1500px"} %}
+{% simplemindmap type="json",style={"height":"2000px"} %}
 ```json
 {
  "name": "flare",
@@ -585,7 +585,7 @@ some
 {% endsimplemindmap %}
 ````
 
-{% simplemindmap type="json",style={"height":"1500px"} %}
+{% simplemindmap type="json",style={"height":"2000px"} %}
 ```json
 {
  "name": "flare",
