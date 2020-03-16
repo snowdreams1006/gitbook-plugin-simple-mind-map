@@ -18,7 +18,7 @@ const transform = require('markmap/lib/transform.headings');
 var entry = function entry() {
     $("svg.simple-mind-map").each(function () {
       var $svg = $(this);
-
+      
       var pluginConfig = $svg.data("plugin-config") || {};
       var blockConfig = $svg.data("block-config") || {}
       var text = $svg.data("svg-text");
