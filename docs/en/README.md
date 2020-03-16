@@ -81,7 +81,7 @@ In addition, the supported configuration options are as follows :
             "type": "string",
             "title": "colorful or default",
             "required": false,
-            "default": "default"
+            "default": "colorful"
         },
         "linkShape": {
             "type": "string",
