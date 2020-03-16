@@ -6,7 +6,6 @@
  *  - Document: index.js
  *  - Author: snowdreams1006
  *  - Description: Gitbook plugin index
- *  - Create Time: 2020-03-15
  */
 
 require('./plugin.css');
@@ -21,26 +20,17 @@ var entry = function entry() {
       var $svg = $(this);
 
       var pluginConfig = $svg.data("plugin-config") || {};
-      console.log(pluginConfig);
-
-      var blockConfig = $svg.data("block-config") || {};
-      console.log(blockConfig);
-
+      var blockConfig = $svg.data("block-config") || {}
       var text = $svg.data("svg-text");
-      text = JSON.parse(text);
-      console.log(text);
-
-
-      console.log(parse(text));
-      var data = transform(parse(text));
-      console.log(data);
-
-      markmap($svg[0], data, {
-        preset: 'colorful',
-        linkShape: 'diagonal'
-      });
+      if(text){
+        text = JSON.parse(text);
+        var data = transform(parse(text));
+        markmap($svg[0], data, {
+          preset: 'colorful',
+          linkShape: 'diagonal'
+        });
+      }
     });
 };
 
-gitbook.events.bind("start",entry);
 gitbook.events.bind("page.change", entry);
