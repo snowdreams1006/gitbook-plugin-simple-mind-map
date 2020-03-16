@@ -1,418 +1,1129 @@
-# Welcome to gitbook-plugin-icp 👋
+# Welcome to gitbook-plugin-simple-mind-map 👋
 
-[![npm:version](https://img.shields.io/npm/v/gitbook-plugin-icp.svg)](https://www.npmjs.com/package/gitbook-plugin-icp)
-[![npm:download](https://img.shields.io/npm/dt/gitbook-plugin-icp.svg)](https://www.npmjs.com/package/gitbook-plugin-icp)
-[![npm:prerequisite](https://img.shields.io/badge/gitbook-*-blue.svg)](https://www.npmjs.com/package/gitbook-plugin-icp)
-[![github:documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/snowdreams1006/gitbook-plugin-icp#readme)
-[![github:maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/snowdreams1006/gitbook-plugin-icp/graphs/commit-activity)
-[![npm:license](https://img.shields.io/npm/l/gitbook-plugin-icp.svg)](https://github.com/snowdreams1006/gitbook-plugin-icp/blob/master/LICENSE)
-[![github:snodreams1006](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
-[![website:snodreams1006.tech](https://img.shields.io/badge/website-snowdreams1006.tech-brightgreen.svg)](https://snowdreams1006.tech/)
-[![微信公众号:雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg)
+## mind-maps
 
-> gitbook plugin for adding icp info to footer
+````markdown
+```mind:height=750,title=gitbook 入门教程,color
+* [gitbook 入门教程](myGitbook/README.md)
+    * [准备阶段](myGitbook/preparation/prepare.md)
+        * [前置知识](myGitbook/preparation/front-knowledge.md)
+        * [环境要求](myGitbook/preparation/environmental-requirements.md)
+    * [快速体验](myGitbook/experience/preview.md)
+        * [gitbook-cli 命令行操作](myGitbook/experience/gitbook-cli.md)
+        * [gitbook-editor 编辑器操作](myGitbook/experience/gitbook-editor.md)
+        * [gitbook.com 官网操作](myGitbook/experience/gitbook-com.md)
+    * [高级进阶](myGitbook/advance/advance.md)
+        * [插件介绍](myGitbook/advance/plugin.md)
+            * [实用插件](myGitbook/advance/plugin-practical.md)
+            * [主题插件](myGitbook/advance/plugin-theme.md)
+            * [开发插件](myGitbook/advance/plugin-develop.md)
+        * [导出电子书](myGitbook/advance/export.md)
+        * [发布电子书](myGitbook/advance/publish.md)
+    * [公众号引流](myGitbook/openwrite/README.md)
+    * [优化搜索](myGitbook/seo/README.md)
+    * [常见问题](myGitbook/issue/README.md)
+        * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
+        * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
+    * [参考更多](myGitbook/reference/README.md)
+```
+````
 
-### 🏠 [Homepage](https://github.com/snowdreams1006/gitbook-plugin-icp#readme)
-
-- Github : [https://snowdreams1006.github.io/gitbook-plugin-icp/](https://snowdreams1006.github.io/gitbook-plugin-icp/)
-- GitLab: [https://snowdreams1006.gitlab.io/gitbook-plugin-icp/](https://snowdreams1006.gitlab.io/gitbook-plugin-icp/)
-- Gitee : [https://snowdreams1006.gitee.io/gitbook-plugin-icp/](https://snowdreams1006.gitee.io/gitbook-plugin-icp/)
-
-## Screenshot
-
-```mind:height=750,title=正则表达式目录,color
-# 目录
-
-* [正则表达式简介](README.md)
-    * [发展历史](index/progress.md)
-    * [快速尝鲜](index/elegant.md)
-    * [编程实现](index/programming.md)
-    * [简要总结](index/summary.md)
-* [快速上手正则表达式](quickstart/README.md)
-    * [正则表达式的应用场景](quickstart/problem.md)
-    * [最简单的正则表达式](quickstart/simple.md)
-    * [正则表达式其实很强大](quickstart/example.md)
-    * [大白话说清楚正则匹配流程](quickstart/workflow.md)
-    * [搞定基本概念正则不再难](quickstart/concept.md)
-    * [正则表达式的成对操作](quickstart/sides.md)
-    * [可视化直观梳理正则表达式](quickstart/visualization.md)
-    * [正则表达式简单练习](quickstart/practice.md)
-    * [最常见的应用场景](quickstart/README.md)
-        * [查找规则文本](quickstart/situation/find.md)
-        * [提取关键数据](quickstart/situation/extract.md)
-        * [验证特定格式](quickstart/situation/validation.md)
-    * [怎么用正则处理复杂文本](quickstart/complex.md)
-    * [正则表达式的运行效率](quickstart/inefficient.md)
-    * [快速入门的简要总结](quickstart/summary.md)
-* [不同编程语言的正则实现](language/README.md)
-    * [浏览器直接原生支持js](language/js.md)
-    * [综合就业排名第一java](language/java.md)
-    * [应用领域最广泛python](language/python.md)
-    * [编程语言的实现总结](language/summary.md)
-* [学会正则的基础语法](grammar/basic/README.md)
-    * [正则的基本组成规则](grammar/basic/composition/README.md)
-        * [普通字符](grammar/basic/composition/normal.md)
-        * [特殊字符](grammar/basic/composition/special.md)
-    * [正则表达式中的特殊字符](grammar/basic/special/README.md)
-        * [通配符](grammar/basic/special/wildcard.md)
-        * [重复限定符](grammar/basic/special/repeat.md)
-        * [位置定界符](grammar/basic/special/position.md)
-        * [字符集范围符](grammar/basic/special/scope.md)
-        * [常见的缩写字符](grammar/basic/special/simplify.md)
-        * [表示逻辑取反的字符](grammar/basic/special/logic.md)
-        * [神奇的转义符](grammar/basic/special/escape.md)
-    * [正则中常见的成对操作](grammar/basic/confuse/README.md)
-        * [匹配单字符还是多字符](grammar/basic/confuse/singleormultiple.md)
-        * [选择贪婪还是非贪婪模式](grammar/basic/confuse/greedorlazy.md)
-        * [需要捕获还是非捕获分组](grammar/basic/confuse/captureornot.md)
-        * [前瞻断言还是后顾断言](grammar/basic/confuse/foresightorlookback.md)
-        * [正向还是负向断言](grammar/basic/confuse/positiveornegative.md)
-    * [正则中常见的运行模式](grammar/basic/mode/README.md)
-        * [忽略大小写模式](grammar/basic/mode/ignorecase.md)
-        * [全局模式](grammar/basic/mode/global.md)
-        * [多行模式](grammar/basic/mode/multiple.md)
-        * [单行模式](grammar/basic/mode/single.md)
-    * [正则表达式基础练习](grammar/basic/practice.md)
-    * [正则基础知识总结](grammar/basic/summary.md)
-* [搞懂正则的高级语法](grammar/advance/README.md)
-    * [流派概述](grammar/advance/genre.md)
-    * [思维模式](grammar/advance/thinking.md)
-    * [匹配原理](grammar/advance/engine/README.md)
-        * [两类主流的发动引擎](grammar/advance/engine/type.md)
-        * [引擎的匹配规则有哪些](grammar/advance/engine/rule.md)
-        * [正则主导还是文本主导](grammar/advance/engine/drive.md)
-        * [匹配优先和回溯引用](grammar/advance/engine/matchingandtrackback.md)
-        * [举例说明匹配流程](grammar/advance/engine/workflow.md)
-    * [高效正则](grammar/advance/efficient/README.md)
-        * [文本预处理](grammar/advance/efficient/preprocess.md)
-        * [正则预编译](grammar/advance/efficient/precompiled.md)
-        * [尽可能限制范围](grammar/advance/efficient/limitscope.md)
-        * [优先使用简化量词](grammar/advance/efficient/shorter.md)
-        * [慎用分组操作](grammar/advance/efficient/group.md)
-        * [慎用多选字符组](grammar/advance/efficient/optional.md)
-        * [慎用贪婪模式](grammar/advance/efficient/greed.md)
-        * [慎用通配符匹配](grammar/advance/efficient/wildcard.md)
-        * [及时性能测试反馈](grammar/advance/efficient/test.md)
-    * [重新理解](grammar/advance/review/README.md)
-        * [默认匹配单字符](grammar/advance/review/char.md)
-        * [默认贪婪模式](grammar/advance/review/greed.md)
-        * [默认捕获分组](grammar/advance/review/capture.md)
-        * [默认前瞻断言](grammar/advance/review/foresight.md)
-        * [默认正向前瞻](grammar/advance/review/positive.md)
-        * [默认区分大小写](grammar/advance/review/casesensitivity.md)
-        * [支持回溯引用](grammar/advance/review/trackback.md)
-    * [迎接挑战](grammar/advance/practice/README.md)
-        * [匹配对称的括号](grammar/advance/practice/matching.md)
-        * [应付异常匹配](grammar/advance/practice/exception.md)
-        * [验证数据格式](grammar/advance/practice/validation.md)
-    * [回顾总结](grammar/advance/summary.md)
-* [从熟练到精通正则表达式](implement/master/README.md)
-    * [可视化正则表达式](implement/master/explain.md)
-    * [实现简单正则引擎](implement/master/engine.md)
-    * [优化正则表达式](implement/master/optimization.md)
-    * [造轮子正则总结](implement/master/summary.md)
-* [推荐学习资源](learning/README.md)
-    * [学习辅助工具](learning/tools.md)
-    * [升级提升之路](learning/improve.md)
-* [一起回顾总结](review/README.md)
+```mind:height=750,title=gitbook 入门教程,color
+* [gitbook 入门教程](myGitbook/README.md)
+    * [准备阶段](myGitbook/preparation/prepare.md)
+        * [前置知识](myGitbook/preparation/front-knowledge.md)
+        * [环境要求](myGitbook/preparation/environmental-requirements.md)
+    * [快速体验](myGitbook/experience/preview.md)
+        * [gitbook-cli 命令行操作](myGitbook/experience/gitbook-cli.md)
+        * [gitbook-editor 编辑器操作](myGitbook/experience/gitbook-editor.md)
+        * [gitbook.com 官网操作](myGitbook/experience/gitbook-com.md)
+    * [高级进阶](myGitbook/advance/advance.md)
+        * [插件介绍](myGitbook/advance/plugin.md)
+            * [实用插件](myGitbook/advance/plugin-practical.md)
+            * [主题插件](myGitbook/advance/plugin-theme.md)
+            * [开发插件](myGitbook/advance/plugin-develop.md)
+        * [导出电子书](myGitbook/advance/export.md)
+        * [发布电子书](myGitbook/advance/publish.md)
+    * [公众号引流](myGitbook/openwrite/README.md)
+    * [优化搜索](myGitbook/seo/README.md)
+    * [常见问题](myGitbook/issue/README.md)
+        * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
+        * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
+    * [参考更多](myGitbook/reference/README.md)
 ```
 
-```
+## simple-mind-map
+
+### markdown
+
+````markdown
 {% simplemindmap %}
-
-{% endsimplemindmap %}
+```markdown
+* [gitbook 入门教程](myGitbook/README.md)
+    * [准备阶段](myGitbook/preparation/prepare.md)
+        * [前置知识](myGitbook/preparation/front-knowledge.md)
+        * [环境要求](myGitbook/preparation/environmental-requirements.md)
+    * [快速体验](myGitbook/experience/preview.md)
+        * [gitbook-cli 命令行操作](myGitbook/experience/gitbook-cli.md)
+        * [gitbook-editor 编辑器操作](myGitbook/experience/gitbook-editor.md)
+        * [gitbook.com 官网操作](myGitbook/experience/gitbook-com.md)
+    * [高级进阶](myGitbook/advance/advance.md)
+        * [插件介绍](myGitbook/advance/plugin.md)
+            * [实用插件](myGitbook/advance/plugin-practical.md)
+            * [主题插件](myGitbook/advance/plugin-theme.md)
+            * [开发插件](myGitbook/advance/plugin-develop.md)
+        * [导出电子书](myGitbook/advance/export.md)
+        * [发布电子书](myGitbook/advance/publish.md)
+    * [公众号引流](myGitbook/openwrite/README.md)
+    * [优化搜索](myGitbook/seo/README.md)
+    * [常见问题](myGitbook/issue/README.md)
+        * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
+        * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
+    * [参考更多](myGitbook/reference/README.md)
 ```
+{% endsimplemindmap %}
+````
 
 {% simplemindmap %}
 ```markdown
-# 目录
-
-* [正则表达式简介](README.md)
-    * [发展历史](index/progress.md)
-    * [快速尝鲜](index/elegant.md)
-    * [编程实现](index/programming.md)
-    * [简要总结](index/summary.md)
-* [快速上手正则表达式](quickstart/README.md)
-    * [正则表达式的应用场景](quickstart/problem.md)
-    * [最简单的正则表达式](quickstart/simple.md)
-    * [正则表达式其实很强大](quickstart/example.md)
-    * [大白话说清楚正则匹配流程](quickstart/workflow.md)
-    * [搞定基本概念正则不再难](quickstart/concept.md)
-    * [正则表达式的成对操作](quickstart/sides.md)
-    * [可视化直观梳理正则表达式](quickstart/visualization.md)
-    * [正则表达式简单练习](quickstart/practice.md)
-    * [最常见的应用场景](quickstart/README.md)
-        * [查找规则文本](quickstart/situation/find.md)
-        * [提取关键数据](quickstart/situation/extract.md)
-        * [验证特定格式](quickstart/situation/validation.md)
-    * [怎么用正则处理复杂文本](quickstart/complex.md)
-    * [正则表达式的运行效率](quickstart/inefficient.md)
-    * [快速入门的简要总结](quickstart/summary.md)
-* [不同编程语言的正则实现](language/README.md)
-    * [浏览器直接原生支持js](language/js.md)
-    * [综合就业排名第一java](language/java.md)
-    * [应用领域最广泛python](language/python.md)
-    * [编程语言的实现总结](language/summary.md)
-* [学会正则的基础语法](grammar/basic/README.md)
-    * [正则的基本组成规则](grammar/basic/composition/README.md)
-        * [普通字符](grammar/basic/composition/normal.md)
-        * [特殊字符](grammar/basic/composition/special.md)
-    * [正则表达式中的特殊字符](grammar/basic/special/README.md)
-        * [通配符](grammar/basic/special/wildcard.md)
-        * [重复限定符](grammar/basic/special/repeat.md)
-        * [位置定界符](grammar/basic/special/position.md)
-        * [字符集范围符](grammar/basic/special/scope.md)
-        * [常见的缩写字符](grammar/basic/special/simplify.md)
-        * [表示逻辑取反的字符](grammar/basic/special/logic.md)
-        * [神奇的转义符](grammar/basic/special/escape.md)
-    * [正则中常见的成对操作](grammar/basic/confuse/README.md)
-        * [匹配单字符还是多字符](grammar/basic/confuse/singleormultiple.md)
-        * [选择贪婪还是非贪婪模式](grammar/basic/confuse/greedorlazy.md)
-        * [需要捕获还是非捕获分组](grammar/basic/confuse/captureornot.md)
-        * [前瞻断言还是后顾断言](grammar/basic/confuse/foresightorlookback.md)
-        * [正向还是负向断言](grammar/basic/confuse/positiveornegative.md)
-    * [正则中常见的运行模式](grammar/basic/mode/README.md)
-        * [忽略大小写模式](grammar/basic/mode/ignorecase.md)
-        * [全局模式](grammar/basic/mode/global.md)
-        * [多行模式](grammar/basic/mode/multiple.md)
-        * [单行模式](grammar/basic/mode/single.md)
-    * [正则表达式基础练习](grammar/basic/practice.md)
-    * [正则基础知识总结](grammar/basic/summary.md)
-* [搞懂正则的高级语法](grammar/advance/README.md)
-    * [流派概述](grammar/advance/genre.md)
-    * [思维模式](grammar/advance/thinking.md)
-    * [匹配原理](grammar/advance/engine/README.md)
-        * [两类主流的发动引擎](grammar/advance/engine/type.md)
-        * [引擎的匹配规则有哪些](grammar/advance/engine/rule.md)
-        * [正则主导还是文本主导](grammar/advance/engine/drive.md)
-        * [匹配优先和回溯引用](grammar/advance/engine/matchingandtrackback.md)
-        * [举例说明匹配流程](grammar/advance/engine/workflow.md)
-    * [高效正则](grammar/advance/efficient/README.md)
-        * [文本预处理](grammar/advance/efficient/preprocess.md)
-        * [正则预编译](grammar/advance/efficient/precompiled.md)
-        * [尽可能限制范围](grammar/advance/efficient/limitscope.md)
-        * [优先使用简化量词](grammar/advance/efficient/shorter.md)
-        * [慎用分组操作](grammar/advance/efficient/group.md)
-        * [慎用多选字符组](grammar/advance/efficient/optional.md)
-        * [慎用贪婪模式](grammar/advance/efficient/greed.md)
-        * [慎用通配符匹配](grammar/advance/efficient/wildcard.md)
-        * [及时性能测试反馈](grammar/advance/efficient/test.md)
-    * [重新理解](grammar/advance/review/README.md)
-        * [默认匹配单字符](grammar/advance/review/char.md)
-        * [默认贪婪模式](grammar/advance/review/greed.md)
-        * [默认捕获分组](grammar/advance/review/capture.md)
-        * [默认前瞻断言](grammar/advance/review/foresight.md)
-        * [默认正向前瞻](grammar/advance/review/positive.md)
-        * [默认区分大小写](grammar/advance/review/casesensitivity.md)
-        * [支持回溯引用](grammar/advance/review/trackback.md)
-    * [迎接挑战](grammar/advance/practice/README.md)
-        * [匹配对称的括号](grammar/advance/practice/matching.md)
-        * [应付异常匹配](grammar/advance/practice/exception.md)
-        * [验证数据格式](grammar/advance/practice/validation.md)
-    * [回顾总结](grammar/advance/summary.md)
-* [从熟练到精通正则表达式](implement/master/README.md)
-    * [可视化正则表达式](implement/master/explain.md)
-    * [实现简单正则引擎](implement/master/engine.md)
-    * [优化正则表达式](implement/master/optimization.md)
-    * [造轮子正则总结](implement/master/summary.md)
-* [推荐学习资源](learning/README.md)
-    * [学习辅助工具](learning/tools.md)
-    * [升级提升之路](learning/improve.md)
-* [一起回顾总结](review/README.md)
+* [gitbook 入门教程](myGitbook/README.md)
+    * [准备阶段](myGitbook/preparation/prepare.md)
+        * [前置知识](myGitbook/preparation/front-knowledge.md)
+        * [环境要求](myGitbook/preparation/environmental-requirements.md)
+    * [快速体验](myGitbook/experience/preview.md)
+        * [gitbook-cli 命令行操作](myGitbook/experience/gitbook-cli.md)
+        * [gitbook-editor 编辑器操作](myGitbook/experience/gitbook-editor.md)
+        * [gitbook.com 官网操作](myGitbook/experience/gitbook-com.md)
+    * [高级进阶](myGitbook/advance/advance.md)
+        * [插件介绍](myGitbook/advance/plugin.md)
+            * [实用插件](myGitbook/advance/plugin-practical.md)
+            * [主题插件](myGitbook/advance/plugin-theme.md)
+            * [开发插件](myGitbook/advance/plugin-develop.md)
+        * [导出电子书](myGitbook/advance/export.md)
+        * [发布电子书](myGitbook/advance/publish.md)
+    * [公众号引流](myGitbook/openwrite/README.md)
+    * [优化搜索](myGitbook/seo/README.md)
+    * [常见问题](myGitbook/issue/README.md)
+        * [热加载失败治标之法](myGitbook/issue/rm-output-directory.md)
+        * [初始化默认折叠效果](myGitbook/issue/modify-default-fold.md)
+    * [参考更多](myGitbook/reference/README.md)
 ```
 {% endsimplemindmap %}
 
-- multilingual
+### json
 
-![icp-multilingual-index-use-preview.png](icp-multilingual-index-use-preview.png)
-
-- monolingual
-
-![icp-monolingual-index-use-preview.png](icp-monolingual-index-use-preview.png)
-
-## Usage
-
-### Step #1 - Update `book.json` file
-
-1. In you gitbook's `book.json` file, add `icp` to `plugins` list.
-2. In `pluginsConfig`,Set the `number` value to your own icp.
-3. In `pluginsConfig`,`label` or `link` value is NOT required.By default link url will be [http://www.beian.miit.gov.cn/](http://www.beian.miit.gov.cn/).
-
-Here is simplest example :
-
+````json
+{% simplemindmap %}
 ```json
 {
-    "plugins": ["icp"],
-    "pluginsConfig": {
-        "icp": {
-            "number": "浙ICP备18042346号"
-        }
+ "name": "flare",
+ "children": [
+  {
+   "name": "analytics",
+   "children": [
+    {
+     "name": "cluster",
+     "children": [
+      {"name": "AgglomerativeCluster", "size": 3938},
+      {"name": "CommunityStructure", "size": 3812},
+      {"name": "HierarchicalCluster", "size": 6714},
+      {"name": "MergeEdge", "size": 743}
+     ]
+    },
+    {
+     "name": "graph",
+     "children": [
+      {"name": "BetweennessCentrality", "size": 3534},
+      {"name": "LinkDistance", "size": 5731},
+      {"name": "MaxFlowMinCut", "size": 7840},
+      {"name": "ShortestPaths", "size": 5914},
+      {"name": "SpanningTree", "size": 3416}
+     ]
+    },
+    {
+     "name": "optimization",
+     "children": [
+      {"name": "AspectRatioBanker", "size": 7074}
+     ]
     }
+   ]
+  },
+  {
+   "name": "animate",
+   "children": [
+    {"name": "Easing", "size": 17010},
+    {"name": "FunctionSequence", "size": 5842},
+    {
+     "name": "interpolate",
+     "children": [
+      {"name": "ArrayInterpolator", "size": 1983},
+      {"name": "ColorInterpolator", "size": 2047},
+      {"name": "DateInterpolator", "size": 1375},
+      {"name": "Interpolator", "size": 8746},
+      {"name": "MatrixInterpolator", "size": 2202},
+      {"name": "NumberInterpolator", "size": 1382},
+      {"name": "ObjectInterpolator", "size": 1629},
+      {"name": "PointInterpolator", "size": 1675},
+      {"name": "RectangleInterpolator", "size": 2042}
+     ]
+    },
+    {"name": "ISchedulable", "size": 1041},
+    {"name": "Parallel", "size": 5176},
+    {"name": "Pause", "size": 449},
+    {"name": "Scheduler", "size": 5593},
+    {"name": "Sequence", "size": 5534},
+    {"name": "Transition", "size": 9201},
+    {"name": "Transitioner", "size": 19975},
+    {"name": "TransitionEvent", "size": 1116},
+    {"name": "Tween", "size": 6006}
+   ]
+  },
+  {
+   "name": "data",
+   "children": [
+    {
+     "name": "converters",
+     "children": [
+      {"name": "Converters", "size": 721},
+      {"name": "DelimitedTextConverter", "size": 4294},
+      {"name": "GraphMLConverter", "size": 9800},
+      {"name": "IDataConverter", "size": 1314},
+      {"name": "JSONConverter", "size": 2220}
+     ]
+    },
+    {"name": "DataField", "size": 1759},
+    {"name": "DataSchema", "size": 2165},
+    {"name": "DataSet", "size": 586},
+    {"name": "DataSource", "size": 3331},
+    {"name": "DataTable", "size": 772},
+    {"name": "DataUtil", "size": 3322}
+   ]
+  },
+  {
+   "name": "display",
+   "children": [
+    {"name": "DirtySprite", "size": 8833},
+    {"name": "LineSprite", "size": 1732},
+    {"name": "RectSprite", "size": 3623},
+    {"name": "TextSprite", "size": 10066}
+   ]
+  },
+  {
+   "name": "flex",
+   "children": [
+    {"name": "FlareVis", "size": 4116}
+   ]
+  },
+  {
+   "name": "physics",
+   "children": [
+    {"name": "DragForce", "size": 1082},
+    {"name": "GravityForce", "size": 1336},
+    {"name": "IForce", "size": 319},
+    {"name": "NBodyForce", "size": 10498},
+    {"name": "Particle", "size": 2822},
+    {"name": "Simulation", "size": 9983},
+    {"name": "Spring", "size": 2213},
+    {"name": "SpringForce", "size": 1681}
+   ]
+  },
+  {
+   "name": "query",
+   "children": [
+    {"name": "AggregateExpression", "size": 1616},
+    {"name": "And", "size": 1027},
+    {"name": "Arithmetic", "size": 3891},
+    {"name": "Average", "size": 891},
+    {"name": "BinaryExpression", "size": 2893},
+    {"name": "Comparison", "size": 5103},
+    {"name": "CompositeExpression", "size": 3677},
+    {"name": "Count", "size": 781},
+    {"name": "DateUtil", "size": 4141},
+    {"name": "Distinct", "size": 933},
+    {"name": "Expression", "size": 5130},
+    {"name": "ExpressionIterator", "size": 3617},
+    {"name": "Fn", "size": 3240},
+    {"name": "If", "size": 2732},
+    {"name": "IsA", "size": 2039},
+    {"name": "Literal", "size": 1214},
+    {"name": "Match", "size": 3748},
+    {"name": "Maximum", "size": 843},
+    {
+     "name": "methods",
+     "children": [
+      {"name": "add", "size": 593},
+      {"name": "and", "size": 330},
+      {"name": "average", "size": 287},
+      {"name": "count", "size": 277},
+      {"name": "distinct", "size": 292},
+      {"name": "div", "size": 595},
+      {"name": "eq", "size": 594},
+      {"name": "fn", "size": 460},
+      {"name": "gt", "size": 603},
+      {"name": "gte", "size": 625},
+      {"name": "iff", "size": 748},
+      {"name": "isa", "size": 461},
+      {"name": "lt", "size": 597},
+      {"name": "lte", "size": 619},
+      {"name": "max", "size": 283},
+      {"name": "min", "size": 283},
+      {"name": "mod", "size": 591},
+      {"name": "mul", "size": 603},
+      {"name": "neq", "size": 599},
+      {"name": "not", "size": 386},
+      {"name": "or", "size": 323},
+      {"name": "orderby", "size": 307},
+      {"name": "range", "size": 772},
+      {"name": "select", "size": 296},
+      {"name": "stddev", "size": 363},
+      {"name": "sub", "size": 600},
+      {"name": "sum", "size": 280},
+      {"name": "update", "size": 307},
+      {"name": "variance", "size": 335},
+      {"name": "where", "size": 299},
+      {"name": "xor", "size": 354},
+      {"name": "_", "size": 264}
+     ]
+    },
+    {"name": "Minimum", "size": 843},
+    {"name": "Not", "size": 1554},
+    {"name": "Or", "size": 970},
+    {"name": "Query", "size": 13896},
+    {"name": "Range", "size": 1594},
+    {"name": "StringUtil", "size": 4130},
+    {"name": "Sum", "size": 791},
+    {"name": "Variable", "size": 1124},
+    {"name": "Variance", "size": 1876},
+    {"name": "Xor", "size": 1101}
+   ]
+  },
+  {
+   "name": "scale",
+   "children": [
+    {"name": "IScaleMap", "size": 2105},
+    {"name": "LinearScale", "size": 1316},
+    {"name": "LogScale", "size": 3151},
+    {"name": "OrdinalScale", "size": 3770},
+    {"name": "QuantileScale", "size": 2435},
+    {"name": "QuantitativeScale", "size": 4839},
+    {"name": "RootScale", "size": 1756},
+    {"name": "Scale", "size": 4268},
+    {"name": "ScaleType", "size": 1821},
+    {"name": "TimeScale", "size": 5833}
+   ]
+  },
+  {
+   "name": "util",
+   "children": [
+    {"name": "Arrays", "size": 8258},
+    {"name": "Colors", "size": 10001},
+    {"name": "Dates", "size": 8217},
+    {"name": "Displays", "size": 12555},
+    {"name": "Filter", "size": 2324},
+    {"name": "Geometry", "size": 10993},
+    {
+     "name": "heap",
+     "children": [
+      {"name": "FibonacciHeap", "size": 9354},
+      {"name": "HeapNode", "size": 1233}
+     ]
+    },
+    {"name": "IEvaluable", "size": 335},
+    {"name": "IPredicate", "size": 383},
+    {"name": "IValueProxy", "size": 874},
+    {
+     "name": "math",
+     "children": [
+      {"name": "DenseMatrix", "size": 3165},
+      {"name": "IMatrix", "size": 2815},
+      {"name": "SparseMatrix", "size": 3366}
+     ]
+    },
+    {"name": "Maths", "size": 17705},
+    {"name": "Orientation", "size": 1486},
+    {
+     "name": "palette",
+     "children": [
+      {"name": "ColorPalette", "size": 6367},
+      {"name": "Palette", "size": 1229},
+      {"name": "ShapePalette", "size": 2059},
+      {"name": "SizePalette", "size": 2291}
+     ]
+    },
+    {"name": "Property", "size": 5559},
+    {"name": "Shapes", "size": 19118},
+    {"name": "Sort", "size": 6887},
+    {"name": "Stats", "size": 6557},
+    {"name": "Strings", "size": 22026}
+   ]
+  },
+  {
+   "name": "vis",
+   "children": [
+    {
+     "name": "axis",
+     "children": [
+      {"name": "Axes", "size": 1302},
+      {"name": "Axis", "size": 24593},
+      {"name": "AxisGridLine", "size": 652},
+      {"name": "AxisLabel", "size": 636},
+      {"name": "CartesianAxes", "size": 6703}
+     ]
+    },
+    {
+     "name": "controls",
+     "children": [
+      {"name": "AnchorControl", "size": 2138},
+      {"name": "ClickControl", "size": 3824},
+      {"name": "Control", "size": 1353},
+      {"name": "ControlList", "size": 4665},
+      {"name": "DragControl", "size": 2649},
+      {"name": "ExpandControl", "size": 2832},
+      {"name": "HoverControl", "size": 4896},
+      {"name": "IControl", "size": 763},
+      {"name": "PanZoomControl", "size": 5222},
+      {"name": "SelectionControl", "size": 7862},
+      {"name": "TooltipControl", "size": 8435}
+     ]
+    },
+    {
+     "name": "data",
+     "children": [
+      {"name": "Data", "size": 20544},
+      {"name": "DataList", "size": 19788},
+      {"name": "DataSprite", "size": 10349},
+      {"name": "EdgeSprite", "size": 3301},
+      {"name": "NodeSprite", "size": 19382},
+      {
+       "name": "render",
+       "children": [
+        {"name": "ArrowType", "size": 698},
+        {"name": "EdgeRenderer", "size": 5569},
+        {"name": "IRenderer", "size": 353},
+        {"name": "ShapeRenderer", "size": 2247}
+       ]
+      },
+      {"name": "ScaleBinding", "size": 11275},
+      {"name": "Tree", "size": 7147},
+      {"name": "TreeBuilder", "size": 9930}
+     ]
+    },
+    {
+     "name": "events",
+     "children": [
+      {"name": "DataEvent", "size": 2313},
+      {"name": "SelectionEvent", "size": 1880},
+      {"name": "TooltipEvent", "size": 1701},
+      {"name": "VisualizationEvent", "size": 1117}
+     ]
+    },
+    {
+     "name": "legend",
+     "children": [
+      {"name": "Legend", "size": 20859},
+      {"name": "LegendItem", "size": 4614},
+      {"name": "LegendRange", "size": 10530}
+     ]
+    },
+    {
+     "name": "operator",
+     "children": [
+      {
+       "name": "distortion",
+       "children": [
+        {"name": "BifocalDistortion", "size": 4461},
+        {"name": "Distortion", "size": 6314},
+        {"name": "FisheyeDistortion", "size": 3444}
+       ]
+      },
+      {
+       "name": "encoder",
+       "children": [
+        {"name": "ColorEncoder", "size": 3179},
+        {"name": "Encoder", "size": 4060},
+        {"name": "PropertyEncoder", "size": 4138},
+        {"name": "ShapeEncoder", "size": 1690},
+        {"name": "SizeEncoder", "size": 1830}
+       ]
+      },
+      {
+       "name": "filter",
+       "children": [
+        {"name": "FisheyeTreeFilter", "size": 5219},
+        {"name": "GraphDistanceFilter", "size": 3165},
+        {"name": "VisibilityFilter", "size": 3509}
+       ]
+      },
+      {"name": "IOperator", "size": 1286},
+      {
+       "name": "label",
+       "children": [
+        {"name": "Labeler", "size": 9956},
+        {"name": "RadialLabeler", "size": 3899},
+        {"name": "StackedAreaLabeler", "size": 3202}
+       ]
+      },
+      {
+       "name": "layout",
+       "children": [
+        {"name": "AxisLayout", "size": 6725},
+        {"name": "BundledEdgeRouter", "size": 3727},
+        {"name": "CircleLayout", "size": 9317},
+        {"name": "CirclePackingLayout", "size": 12003},
+        {"name": "DendrogramLayout", "size": 4853},
+        {"name": "ForceDirectedLayout", "size": 8411},
+        {"name": "IcicleTreeLayout", "size": 4864},
+        {"name": "IndentedTreeLayout", "size": 3174},
+        {"name": "Layout", "size": 7881},
+        {"name": "NodeLinkTreeLayout", "size": 12870},
+        {"name": "PieLayout", "size": 2728},
+        {"name": "RadialTreeLayout", "size": 12348},
+        {"name": "RandomLayout", "size": 870},
+        {"name": "StackedAreaLayout", "size": 9121},
+        {"name": "TreeMapLayout", "size": 9191}
+       ]
+      },
+      {"name": "Operator", "size": 2490},
+      {"name": "OperatorList", "size": 5248},
+      {"name": "OperatorSequence", "size": 4190},
+      {"name": "OperatorSwitch", "size": 2581},
+      {"name": "SortOperator", "size": 2023}
+     ]
+    },
+    {"name": "Visualization", "size": 16540}
+   ]
+  }
+ ]
 }
 ```
+{% endsimplemindmap %}
+````
 
-In addition, the supported configuration options are as follows : 
-
+{% simplemindmap %}
 ```json
-"gitbook": {
-  "properties": {
-    "label": {
-      "type": "string",
-      "title": "icp label",
-      "required": false
+{
+ "name": "flare",
+ "children": [
+  {
+   "name": "analytics",
+   "children": [
+    {
+     "name": "cluster",
+     "children": [
+      {"name": "AgglomerativeCluster", "size": 3938},
+      {"name": "CommunityStructure", "size": 3812},
+      {"name": "HierarchicalCluster", "size": 6714},
+      {"name": "MergeEdge", "size": 743}
+     ]
     },
-    "number": {
-      "type": "string",
-      "title": "icp number",
-      "required": true
+    {
+     "name": "graph",
+     "children": [
+      {"name": "BetweennessCentrality", "size": 3534},
+      {"name": "LinkDistance", "size": 5731},
+      {"name": "MaxFlowMinCut", "size": 7840},
+      {"name": "ShortestPaths", "size": 5914},
+      {"name": "SpanningTree", "size": 3416}
+     ]
     },
-    "link": {
-      "type": "string",
-      "title": "link url",
-      "required": false,
-      "default": "http://www.beian.miit.gov.cn/"
+    {
+     "name": "optimization",
+     "children": [
+      {"name": "AspectRatioBanker", "size": 7074}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "animate",
+   "children": [
+    {"name": "Easing", "size": 17010},
+    {"name": "FunctionSequence", "size": 5842},
+    {
+     "name": "interpolate",
+     "children": [
+      {"name": "ArrayInterpolator", "size": 1983},
+      {"name": "ColorInterpolator", "size": 2047},
+      {"name": "DateInterpolator", "size": 1375},
+      {"name": "Interpolator", "size": 8746},
+      {"name": "MatrixInterpolator", "size": 2202},
+      {"name": "NumberInterpolator", "size": 1382},
+      {"name": "ObjectInterpolator", "size": 1629},
+      {"name": "PointInterpolator", "size": 1675},
+      {"name": "RectangleInterpolator", "size": 2042}
+     ]
     },
-    "style": {
-      "type": "object",
-      "title": "icp number style",
-      "required": false
+    {"name": "ISchedulable", "size": 1041},
+    {"name": "Parallel", "size": 5176},
+    {"name": "Pause", "size": 449},
+    {"name": "Scheduler", "size": 5593},
+    {"name": "Sequence", "size": 5534},
+    {"name": "Transition", "size": 9201},
+    {"name": "Transitioner", "size": 19975},
+    {"name": "TransitionEvent", "size": 1116},
+    {"name": "Tween", "size": 6006}
+   ]
+  },
+  {
+   "name": "data",
+   "children": [
+    {
+     "name": "converters",
+     "children": [
+      {"name": "Converters", "size": 721},
+      {"name": "DelimitedTextConverter", "size": 4294},
+      {"name": "GraphMLConverter", "size": 9800},
+      {"name": "IDataConverter", "size": 1314},
+      {"name": "JSONConverter", "size": 2220}
+     ]
+    },
+    {"name": "DataField", "size": 1759},
+    {"name": "DataSchema", "size": 2165},
+    {"name": "DataSet", "size": 586},
+    {"name": "DataSource", "size": 3331},
+    {"name": "DataTable", "size": 772},
+    {"name": "DataUtil", "size": 3322}
+   ]
+  },
+  {
+   "name": "display",
+   "children": [
+    {"name": "DirtySprite", "size": 8833},
+    {"name": "LineSprite", "size": 1732},
+    {"name": "RectSprite", "size": 3623},
+    {"name": "TextSprite", "size": 10066}
+   ]
+  },
+  {
+   "name": "flex",
+   "children": [
+    {"name": "FlareVis", "size": 4116}
+   ]
+  },
+  {
+   "name": "physics",
+   "children": [
+    {"name": "DragForce", "size": 1082},
+    {"name": "GravityForce", "size": 1336},
+    {"name": "IForce", "size": 319},
+    {"name": "NBodyForce", "size": 10498},
+    {"name": "Particle", "size": 2822},
+    {"name": "Simulation", "size": 9983},
+    {"name": "Spring", "size": 2213},
+    {"name": "SpringForce", "size": 1681}
+   ]
+  },
+  {
+   "name": "query",
+   "children": [
+    {"name": "AggregateExpression", "size": 1616},
+    {"name": "And", "size": 1027},
+    {"name": "Arithmetic", "size": 3891},
+    {"name": "Average", "size": 891},
+    {"name": "BinaryExpression", "size": 2893},
+    {"name": "Comparison", "size": 5103},
+    {"name": "CompositeExpression", "size": 3677},
+    {"name": "Count", "size": 781},
+    {"name": "DateUtil", "size": 4141},
+    {"name": "Distinct", "size": 933},
+    {"name": "Expression", "size": 5130},
+    {"name": "ExpressionIterator", "size": 3617},
+    {"name": "Fn", "size": 3240},
+    {"name": "If", "size": 2732},
+    {"name": "IsA", "size": 2039},
+    {"name": "Literal", "size": 1214},
+    {"name": "Match", "size": 3748},
+    {"name": "Maximum", "size": 843},
+    {
+     "name": "methods",
+     "children": [
+      {"name": "add", "size": 593},
+      {"name": "and", "size": 330},
+      {"name": "average", "size": 287},
+      {"name": "count", "size": 277},
+      {"name": "distinct", "size": 292},
+      {"name": "div", "size": 595},
+      {"name": "eq", "size": 594},
+      {"name": "fn", "size": 460},
+      {"name": "gt", "size": 603},
+      {"name": "gte", "size": 625},
+      {"name": "iff", "size": 748},
+      {"name": "isa", "size": 461},
+      {"name": "lt", "size": 597},
+      {"name": "lte", "size": 619},
+      {"name": "max", "size": 283},
+      {"name": "min", "size": 283},
+      {"name": "mod", "size": 591},
+      {"name": "mul", "size": 603},
+      {"name": "neq", "size": 599},
+      {"name": "not", "size": 386},
+      {"name": "or", "size": 323},
+      {"name": "orderby", "size": 307},
+      {"name": "range", "size": 772},
+      {"name": "select", "size": 296},
+      {"name": "stddev", "size": 363},
+      {"name": "sub", "size": 600},
+      {"name": "sum", "size": 280},
+      {"name": "update", "size": 307},
+      {"name": "variance", "size": 335},
+      {"name": "where", "size": 299},
+      {"name": "xor", "size": 354},
+      {"name": "_", "size": 264}
+     ]
+    },
+    {"name": "Minimum", "size": 843},
+    {"name": "Not", "size": 1554},
+    {"name": "Or", "size": 970},
+    {"name": "Query", "size": 13896},
+    {"name": "Range", "size": 1594},
+    {"name": "StringUtil", "size": 4130},
+    {"name": "Sum", "size": 791},
+    {"name": "Variable", "size": 1124},
+    {"name": "Variance", "size": 1876},
+    {"name": "Xor", "size": 1101}
+   ]
+  },
+  {
+   "name": "scale",
+   "children": [
+    {"name": "IScaleMap", "size": 2105},
+    {"name": "LinearScale", "size": 1316},
+    {"name": "LogScale", "size": 3151},
+    {"name": "OrdinalScale", "size": 3770},
+    {"name": "QuantileScale", "size": 2435},
+    {"name": "QuantitativeScale", "size": 4839},
+    {"name": "RootScale", "size": 1756},
+    {"name": "Scale", "size": 4268},
+    {"name": "ScaleType", "size": 1821},
+    {"name": "TimeScale", "size": 5833}
+   ]
+  },
+  {
+   "name": "util",
+   "children": [
+    {"name": "Arrays", "size": 8258},
+    {"name": "Colors", "size": 10001},
+    {"name": "Dates", "size": 8217},
+    {"name": "Displays", "size": 12555},
+    {"name": "Filter", "size": 2324},
+    {"name": "Geometry", "size": 10993},
+    {
+     "name": "heap",
+     "children": [
+      {"name": "FibonacciHeap", "size": 9354},
+      {"name": "HeapNode", "size": 1233}
+     ]
+    },
+    {"name": "IEvaluable", "size": 335},
+    {"name": "IPredicate", "size": 383},
+    {"name": "IValueProxy", "size": 874},
+    {
+     "name": "math",
+     "children": [
+      {"name": "DenseMatrix", "size": 3165},
+      {"name": "IMatrix", "size": 2815},
+      {"name": "SparseMatrix", "size": 3366}
+     ]
+    },
+    {"name": "Maths", "size": 17705},
+    {"name": "Orientation", "size": 1486},
+    {
+     "name": "palette",
+     "children": [
+      {"name": "ColorPalette", "size": 6367},
+      {"name": "Palette", "size": 1229},
+      {"name": "ShapePalette", "size": 2059},
+      {"name": "SizePalette", "size": 2291}
+     ]
+    },
+    {"name": "Property", "size": 5559},
+    {"name": "Shapes", "size": 19118},
+    {"name": "Sort", "size": 6887},
+    {"name": "Stats", "size": 6557},
+    {"name": "Strings", "size": 22026}
+   ]
+  },
+  {
+   "name": "vis",
+   "children": [
+    {
+     "name": "axis",
+     "children": [
+      {"name": "Axes", "size": 1302},
+      {"name": "Axis", "size": 24593},
+      {"name": "AxisGridLine", "size": 652},
+      {"name": "AxisLabel", "size": 636},
+      {"name": "CartesianAxes", "size": 6703}
+     ]
+    },
+    {
+     "name": "controls",
+     "children": [
+      {"name": "AnchorControl", "size": 2138},
+      {"name": "ClickControl", "size": 3824},
+      {"name": "Control", "size": 1353},
+      {"name": "ControlList", "size": 4665},
+      {"name": "DragControl", "size": 2649},
+      {"name": "ExpandControl", "size": 2832},
+      {"name": "HoverControl", "size": 4896},
+      {"name": "IControl", "size": 763},
+      {"name": "PanZoomControl", "size": 5222},
+      {"name": "SelectionControl", "size": 7862},
+      {"name": "TooltipControl", "size": 8435}
+     ]
+    },
+    {
+     "name": "data",
+     "children": [
+      {"name": "Data", "size": 20544},
+      {"name": "DataList", "size": 19788},
+      {"name": "DataSprite", "size": 10349},
+      {"name": "EdgeSprite", "size": 3301},
+      {"name": "NodeSprite", "size": 19382},
+      {
+       "name": "render",
+       "children": [
+        {"name": "ArrowType", "size": 698},
+        {"name": "EdgeRenderer", "size": 5569},
+        {"name": "IRenderer", "size": 353},
+        {"name": "ShapeRenderer", "size": 2247}
+       ]
+      },
+      {"name": "ScaleBinding", "size": 11275},
+      {"name": "Tree", "size": 7147},
+      {"name": "TreeBuilder", "size": 9930}
+     ]
+    },
+    {
+     "name": "events",
+     "children": [
+      {"name": "DataEvent", "size": 2313},
+      {"name": "SelectionEvent", "size": 1880},
+      {"name": "TooltipEvent", "size": 1701},
+      {"name": "VisualizationEvent", "size": 1117}
+     ]
+    },
+    {
+     "name": "legend",
+     "children": [
+      {"name": "Legend", "size": 20859},
+      {"name": "LegendItem", "size": 4614},
+      {"name": "LegendRange", "size": 10530}
+     ]
+    },
+    {
+     "name": "operator",
+     "children": [
+      {
+       "name": "distortion",
+       "children": [
+        {"name": "BifocalDistortion", "size": 4461},
+        {"name": "Distortion", "size": 6314},
+        {"name": "FisheyeDistortion", "size": 3444}
+       ]
+      },
+      {
+       "name": "encoder",
+       "children": [
+        {"name": "ColorEncoder", "size": 3179},
+        {"name": "Encoder", "size": 4060},
+        {"name": "PropertyEncoder", "size": 4138},
+        {"name": "ShapeEncoder", "size": 1690},
+        {"name": "SizeEncoder", "size": 1830}
+       ]
+      },
+      {
+       "name": "filter",
+       "children": [
+        {"name": "FisheyeTreeFilter", "size": 5219},
+        {"name": "GraphDistanceFilter", "size": 3165},
+        {"name": "VisibilityFilter", "size": 3509}
+       ]
+      },
+      {"name": "IOperator", "size": 1286},
+      {
+       "name": "label",
+       "children": [
+        {"name": "Labeler", "size": 9956},
+        {"name": "RadialLabeler", "size": 3899},
+        {"name": "StackedAreaLabeler", "size": 3202}
+       ]
+      },
+      {
+       "name": "layout",
+       "children": [
+        {"name": "AxisLayout", "size": 6725},
+        {"name": "BundledEdgeRouter", "size": 3727},
+        {"name": "CircleLayout", "size": 9317},
+        {"name": "CirclePackingLayout", "size": 12003},
+        {"name": "DendrogramLayout", "size": 4853},
+        {"name": "ForceDirectedLayout", "size": 8411},
+        {"name": "IcicleTreeLayout", "size": 4864},
+        {"name": "IndentedTreeLayout", "size": 3174},
+        {"name": "Layout", "size": 7881},
+        {"name": "NodeLinkTreeLayout", "size": 12870},
+        {"name": "PieLayout", "size": 2728},
+        {"name": "RadialTreeLayout", "size": 12348},
+        {"name": "RandomLayout", "size": 870},
+        {"name": "StackedAreaLayout", "size": 9121},
+        {"name": "TreeMapLayout", "size": 9191}
+       ]
+      },
+      {"name": "Operator", "size": 2490},
+      {"name": "OperatorList", "size": 5248},
+      {"name": "OperatorSequence", "size": 4190},
+      {"name": "OperatorSwitch", "size": 2581},
+      {"name": "SortOperator", "size": 2023}
+     ]
+    },
+    {"name": "Visualization", "size": 16540}
+   ]
+  }
+ ]
+}
+```
+{% endsimplemindmap %}
+
+### mindmup
+
+````mindmup
+{% simplemindmap %}
+```mindmup
+{
+  "title": "MindMapping",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "11": {
+      "title": "Software",
+      "id": 8,
+      "ideas": {
+        "1": {
+          "title": "FreeMind",
+          "id": 9
+        },
+        "2": {
+          "title": "XMind",
+          "id": 10
+        },
+        "3": {
+          "title": "MindMeister",
+          "id": 11
+        },
+        "4": {
+          "title": "iMindMap",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "by Tony Buzan",
+              "id": 30
+            }
+          }
+        },
+        "5": {
+          "title": "MindManager",
+          "id": 14
+        },
+        "2.5": {
+          "title": "MindMup",
+          "id": 12
+        }
+      }
+    },
+    "21": {
+      "title": "Misc",
+      "id": 15,
+      "ideas": {
+        "1": {
+          "title": "Visual Understanding Environment (VUE)",
+          "id": 23,
+          "ideas": {
+            "1": {
+              "title": "http://vue.tufts.edu/index.cfm",
+              "id": 24
+            }
+          }
+        },
+        "2": {
+          "title": "TiddlyMap",
+          "id": 26
+        },
+        "3": {
+          "title": "Orgmode.org",
+          "id": 27
+        },
+        "4": {
+          "title": "https://www.moh.io/mohiomap",
+          "id": 31,
+          "ideas": {}
+        }
+      }
+    },
+    "31": {
+      "title": "Resources",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "http://lifehacker.com/five-best-mind-mapping-tools-476534555",
+          "id": 18
+        },
+        "2": {
+          "title": "http://lifehacker.com/5188833/hive-five-five-best-mind-mapping-applications",
+          "id": 19
+        },
+        "3": {
+          "title": "https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software",
+          "id": 21
+        }
+      },
+      "attr": {
+        "position": [
+          67.5,
+          255,
+          1
+        ],
+        "style": {}
+      }
     }
   }
 }
 ```
+{% endsimplemindmap %}
+````
 
-### Step #2 - gitbook commands
-
-1. Run `gitbook install`. It will automatically install `icp` gitbook plugin for your book. This is needed only once.
-
-```bash
-gitbook install
-```
-
-or you can run `npm install gitbook-plugin-icp` to install locally.
-
-```bash
-npm install gitbook-plugin-icp
-```
-
-2. Build your book (`gitbook build`) or serve (`gitbook serve`) as usual.
-
-```bash
-gitbook serve
-```
-
-## Example
-
-- Official documentation configuration file
-
-> [https://github.com/snowdreams1006/gitbook-plugin-icp/blob/master/docs/book.json](https://github.com/snowdreams1006/gitbook-plugin-icp/blob/master/docs/book.json)
-
-```json
+{% simplemindmap %}
+```mindmup
 {
-    "plugins": ["icp"],
-    "pluginsConfig": {
-        "icp": {
-            "number": "浙ICP备18042346号"
-        }
-    }
-}
-```
-
-- Official example configuration file
-
-> [https://github.com/snowdreams1006/gitbook-plugin-icp/blob/master/example/book.json](https://github.com/snowdreams1006/gitbook-plugin-icp/blob/master/example/book.json)
-
-```json
-{
-    "plugins": ["icp"],
-    "pluginsConfig": {
-        "icp": {
-            "number": "浙ICP备18042346号"
-        }
-    }
-}
-```
-
-- Sample `book.json` file 
-
-```json
-{
-    "plugins": ["icp"],
-    "pluginsConfig": {
-        "icp": {
-            "number": "YOUR OWN ICP NUMBER"
-        }
-    }
-}
-```
-
-or you can add `label` to custom your label:
-
-```json
-{
-    "plugins": ["icp"],
-    "pluginsConfig": {
-        "icp": {
-            "label": "YOUR OWN ICP LABEL",
-            "number": "YOUR OWN ICP NUMBER"
-        }
-    }
-}
-```
-
-or you can add `link` to custom your link:
-
-```json
-{
-    "plugins": ["icp"],
-    "pluginsConfig": {
-        "icp": {
-            "label": "YOUR OWN ICP LABEL",
-            "number": "YOUR OWN ICP NUMBER",
-            "link":"YOUR OWN ICP LINK"
-        }
-    }
-}
-```
-
-or you can add `style` to custom your style of number:
-
-```json
-{
-    "plugins": ["icp"],
-    "pluginsConfig": {
-        "icp": {
-            "label": "YOUR OWN ICP LABEL",
-            "number": "YOUR OWN ICP NUMBER",
-            "link": "YOUR OWN ICP LINK",
-            "style": {
-              "color":  "#f72b07"
+  "title": "MindMapping",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "11": {
+      "title": "Software",
+      "id": 8,
+      "ideas": {
+        "1": {
+          "title": "FreeMind",
+          "id": 9
+        },
+        "2": {
+          "title": "XMind",
+          "id": 10
+        },
+        "3": {
+          "title": "MindMeister",
+          "id": 11
+        },
+        "4": {
+          "title": "iMindMap",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "by Tony Buzan",
+              "id": 30
             }
+          }
+        },
+        "5": {
+          "title": "MindManager",
+          "id": 14
+        },
+        "2.5": {
+          "title": "MindMup",
+          "id": 12
         }
+      }
+    },
+    "21": {
+      "title": "Misc",
+      "id": 15,
+      "ideas": {
+        "1": {
+          "title": "Visual Understanding Environment (VUE)",
+          "id": 23,
+          "ideas": {
+            "1": {
+              "title": "http://vue.tufts.edu/index.cfm",
+              "id": 24
+            }
+          }
+        },
+        "2": {
+          "title": "TiddlyMap",
+          "id": 26
+        },
+        "3": {
+          "title": "Orgmode.org",
+          "id": 27
+        },
+        "4": {
+          "title": "https://www.moh.io/mohiomap",
+          "id": 31,
+          "ideas": {}
+        }
+      }
+    },
+    "31": {
+      "title": "Resources",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "http://lifehacker.com/five-best-mind-mapping-tools-476534555",
+          "id": 18
+        },
+        "2": {
+          "title": "http://lifehacker.com/5188833/hive-five-five-best-mind-mapping-applications",
+          "id": 19
+        },
+        "3": {
+          "title": "https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software",
+          "id": 21
+        }
+      },
+      "attr": {
+        "position": [
+          67.5,
+          255,
+          1
+        ],
+        "style": {}
+      }
     }
+  }
 }
 ```
+{% endsimplemindmap %}
 
-**Note**: Above snippet can be used as complete `book.json` file, if your book doesn't have one yet.
+### txtmap
 
-## Author
+````txtmap
+{% simplemindmap %}
+```txtmap
+some
+  example
+    content
+  for
+  you
+    to
+    see
+      the
+    file
+      structure
+```
+{% endsimplemindmap %}
+````
 
-👤 **snowdreams1006**
-
-- Website: [snowdreams1006.tech](https://snowdreams1006.tech/)
-- Github: [@snowdreams1006](https://github.com/snowdreams1006)
-- Email: [snowdreams1006@163.com](mailto:snowdreams1006@163.com)
-
-## Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/snowdreams1006/gitbook-plugin-icp/issues).
-
-## Show your support
-
-Give a [**Star**](https://github.com/snowdreams1006/gitbook-plugin-icp) if this project helped you!
-
-## Copyright
-
-Copyright © 2019 [snowdreams1006](https://github.com/snowdreams1006).
-
-This project is [MIT](https://github.com/snowdreams1006/gitbook-plugin-icp/blob/master/LICENSE) licensed.
+{% simplemindmap %}
+```txtmap
+some
+  example
+    content
+  for
+  you
+    to
+    see
+      the
+    file
+      structure
+```
+{% endsimplemindmap %}

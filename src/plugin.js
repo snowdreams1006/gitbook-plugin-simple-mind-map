@@ -48,8 +48,6 @@ var entry = function entry() {
 
               data = transform(parse(text));
               break; 
-          default:
-              break
       } 
       if(data){
         markmap($svg[0], data, simplemindmapConfig);
