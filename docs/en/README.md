@@ -1215,8 +1215,7 @@ gitbook serve
         "simple-mind-map": {
             "type": "markdown",
             "preset": "colorful",
-            "linkShape": "diagonal",
-            "autoFit": true
+            "linkShape": "diagonal"
         }
     }
 }
@@ -1231,8 +1230,7 @@ gitbook serve
     "plugins": ["simple-mind-map"],
     "pluginsConfig": {
         "simple-mind-map": {
-            "preset": "default",
-            "linkShape": "bracket"
+            "type": "markdown"
         }
     }
 }
@@ -1287,7 +1285,7 @@ or you can add `style` to custom your style of mind map:
             "linkShape": "diagonal",
             "autoFit": true,
             "style": {
-              "color":  "#f72b07"
+              "height":  "750px"
             }
         }
     }
