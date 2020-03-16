@@ -34,21 +34,21 @@ var entry = function entry() {
       var text = $svg.data("svg-text");
       console.log("text",text);
 
+      if(text){
+        text = JSON.parse(text);
+      }
+      console.log("text",text);
+
       var data;
       switch (type) {
           case "markdown":
             var parse = require("markmap/lib/parse.markdown");
             var transform = require("markmap/lib/transform.headings");
 
-            if(text){
-              text = JSON.parse(text);
-              data = transform(parse(text));
-            }
+            data = transform(parse(text));
             break; 
           case "json":
-              if(text){
-                data = JSON.parse(text);
-              }
+              data = text;
               break; 
           case "mindmup":
               var transform = require("markmap/lib/transform.mindmup");
