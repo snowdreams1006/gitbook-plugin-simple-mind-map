@@ -24,7 +24,7 @@ module.exports = {
             process: function process(block) {
                 var pluginConfig = this.options.pluginsConfig["simple-mind-map"] || {};
                 var blockConfig = block || {};
-                var styleConfig = Object.assign((pluginConfig.style || {}), (blockConfig.kwargs.style || {}));
+                var styleConfig = Object.assign({},(pluginConfig.style || {}), (blockConfig.kwargs.style || {}));
                 var customStyle = '';
                 if(styleConfig){
                     for (var style in styleConfig) { 
@@ -51,7 +51,6 @@ module.exports = {
                         type = pluginType;
                     }
                 }
-
                 block.body = '<svg class="simple-mind-map" style="'+(customStyle)+'" data-lang-type="'+(type)+'" data-plugin-config="'+(escapeHTML(JSON.stringify(pluginConfig)))+'" data-block-config="'+(escapeHTML(JSON.stringify(blockConfig)))+'" data-svg-text="'+(text)+'"></svg>';
                 return block;
             }

@@ -19,50 +19,50 @@ var entry = function entry() {
     $("svg.simple-mind-map").each(function () {
       var $svg = $(this);
       var pluginConfig = $svg.data("plugin-config") || {};
-      var blockConfig = $svg.data("block-config") || {};
-      var simplemindmapConfig = Object.assign((pluginConfig || {}), (blockConfig.kwargs || {}));
-      var type = $svg.data("lang-type");
-      if(type){
-        type = type.toLocaleLowerCase();
-      }
-      var text = $svg.data("svg-text");
-      var data;
-      switch (type) {
-          case "markdown":
-            parse = require("markmap/lib/parse.markdown");
-            transform = require("markmap/lib/transform.headings");
-            if(text){
-              text = JSON.parse(text);
-            }
-            data = transform(parse(text));
-            break; 
-          case "json":
-              if(text){
-                text = eval(text);
-                text = JSON.parse(text);
-              }
-              data = text;
-              break; 
-          case "mindmup":
-              transform = require("markmap/lib/transform.mindmup");
-              if(text){
-                text = eval(text);
-                text = JSON.parse(text);
-              }
-              data = transform(text);
-              break; 
-          case "txtmap":
-              parse = require("markmap/lib/parse.txtmap");
+        var blockConfig = $svg.data("block-config") || {};
+        var simplemindmapConfig = Object.assign((pluginConfig || {}), (blockConfig.kwargs || {}));
+        var type = $svg.data("lang-type");
+        if(type){
+          type = type.toLocaleLowerCase();
+        }
+        var text = $svg.data("svg-text");
+        var data;
+        switch (type) {
+            case "markdown":
+              parse = require("markmap/lib/parse.markdown");
               transform = require("markmap/lib/transform.headings");
               if(text){
                 text = JSON.parse(text);
               }
               data = transform(parse(text));
               break; 
-      }
-      if(data){
-        markmap($svg[0], data, simplemindmapConfig);
-      }
+            case "json":
+                if(text){
+                  text = eval(text);
+                  text = JSON.parse(text);
+                }
+                data = text;
+                break; 
+            case "mindmup":
+                transform = require("markmap/lib/transform.mindmup");
+                if(text){
+                  text = eval(text);
+                  text = JSON.parse(text);
+                }
+                data = transform(text);
+                break; 
+            case "txtmap":
+                parse = require("markmap/lib/parse.txtmap");
+                transform = require("markmap/lib/transform.headings");
+                if(text){
+                  text = JSON.parse(text);
+                }
+                data = transform(parse(text));
+                break; 
+        }
+        if(data){
+          markmap($svg[0], data, simplemindmapConfig);
+        }
     });
 };
 
