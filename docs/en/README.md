@@ -117,7 +117,7 @@
 * [一起回顾总结](review/README.md)
 ```
 
-{% simplemindmap title="正则表达式目录",color="colorful" %}
+{% simplemindmap style={height:750} %}
 ```markdown
 # 目录
 

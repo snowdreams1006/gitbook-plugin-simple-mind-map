@@ -73,6 +73,12 @@
         },
         "icp": {
             "number": "浙ICP备18042346号"
+        },
+        "simple-mind-map": {
+            "type": "markdown",
+            "preset": "colorful",
+            "linkShape": "diagonal",
+            "autoFit": true
         }
     }
 }

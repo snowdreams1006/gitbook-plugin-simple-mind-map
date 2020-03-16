@@ -23,10 +23,18 @@ module.exports = {
         simplemindmap: {
             process: function process(block) {
                 var pluginConfig = this.options.pluginsConfig["simple-mind-map"] || {};
-                pluginConfig = escapeHTML(JSON.stringify(pluginConfig));
-
-                var blockConfig = block;
-                blockConfig = escapeHTML(JSON.stringify(blockConfig));
+                var blockConfig = block || {};
+                var styleConfig = Object.assign(pluginConfig, blockConfig.kwargs);
+                var customStyle = '';
+                if(styleConfig){
+                    for (var style in styleConfig) { 
+                        if (Object.prototype.hasOwnProperty.call(styleConfig, style)) { 
+                            customStyle = style + ": " + styleConfig[style] + ";"
+                        } 
+                    }
+                }
+                console.log(styleConfig);
+                console.log(customStyle);
 
                 var rawBody = block.body;
                 var result,text;
@@ -34,7 +42,7 @@ module.exports = {
                     text = escapeHTML(JSON.stringify(result[1]));
                 }
                 
-                block.body = '<svg class="simple-mind-map" data-plugin-config="'+(pluginConfig)+'" data-block-config="'+(blockConfig)+'" data-svg-text="'+(text)+'"></svg>';
+                block.body = '<svg class="simple-mind-map" style="'+(customStyle)+'" data-plugin-config="'+(escapeHTML(JSON.stringify(pluginConfig)))+'" data-block-config="'+(escapeHTML(JSON.stringify(blockConfig)))+'" data-svg-text="'+(text)+'"></svg>';
 
                 return block;
             }

@@ -5,7 +5,7 @@
     "private": false,
     "main": "index.js",
     "scripts": {
-        "start": "npx webpack --config webpack.config.js",
+        "start": "npx webpack --config webpack.config.js && cd docs && gitbook serve",
         "dev": "npx webpack --colors --watch",
         "prod": "npx webpack --colors --optimize-minimize",
         "build": "npx webpack"
@@ -35,11 +35,6 @@
                 "title": "Markdown or MindMup or Txtmap or Pandoc",
                 "required": false,
                 "default": "markdown"
-            },
-            "title": {
-                "type": "string",
-                "title": "title",
-                "required": false
             },
             "preset": {
                 "type": "string",

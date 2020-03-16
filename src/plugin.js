@@ -20,7 +20,7 @@ var entry = function entry() {
       var $svg = $(this);
       
       var pluginConfig = $svg.data("plugin-config") || {};
-      var blockConfig = $svg.data("block-config") || {}
+      var blockConfig = $svg.data("block-config") || {};
       var text = $svg.data("svg-text");
       if(text){
         text = JSON.parse(text);
