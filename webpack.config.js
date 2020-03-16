@@ -15,7 +15,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   output: {
-    filename: 'plugin.min.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {

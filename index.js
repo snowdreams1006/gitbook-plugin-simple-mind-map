@@ -17,8 +17,7 @@ var escapeHTML = function escapeHTML(str) {
 module.exports = {
     book: {
         assets: "./dist",
-        css: ["plugin.min.css"],
-        js: ["plugin.min.js"],
+        js: ["bundle.js"],
     },
     blocks: {
         simplemindmap: {
