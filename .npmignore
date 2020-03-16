@@ -28,6 +28,9 @@ docs
 ## Dependency directory
 examples
 
+## Dependency directory
+src
+
 ### macOS ###
 # General
 .DS_Store

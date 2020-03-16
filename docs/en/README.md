@@ -60,7 +60,7 @@
 
 ### json
 
-{% simplemindmap %}
+{% simplemindmap type="json" %}
 ```json
 {
  "name": "flare",

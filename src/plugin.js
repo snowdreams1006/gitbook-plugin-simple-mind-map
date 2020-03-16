@@ -17,6 +17,7 @@ var markmap = require("markmap/lib/view.mindmap");
 var entry = function entry() {
     $("svg.simple-mind-map").each(function () {
       var $svg = $(this);
+      console.log($svg[0]);
       
       var pluginConfig = $svg.data("plugin-config") || {};
       console.log("pluginConfig",pluginConfig);
@@ -45,7 +46,9 @@ var entry = function entry() {
             }
             break; 
           case "json":
-              data = text;
+              if(text){
+                data = JSON.parse(text);
+              }
               break; 
           case "mindmup":
               var transform = require("markmap/lib/transform.mindmup");
@@ -58,9 +61,9 @@ var entry = function entry() {
 
               data = transform(parse(text));
               break; 
-      } 
+      }
       console.log("data",data);
-      
+
       if(data){
         markmap($svg[0], data, simplemindmapConfig);
       }
