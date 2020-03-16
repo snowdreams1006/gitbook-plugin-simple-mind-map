@@ -19,10 +19,20 @@ var entry = function entry() {
       var $svg = $(this);
       
       var pluginConfig = $svg.data("plugin-config") || {};
+      console.log("pluginConfig",pluginConfig);
+
       var blockConfig = $svg.data("block-config") || {};
+      console.log("blockConfig",blockConfig);
+
       var simplemindmapConfig = Object.assign((pluginConfig || {}), (blockConfig.kwargs || {}));
+      console.log("simplemindmapConfig",simplemindmapConfig);
+
       var type = simplemindmapConfig.type && simplemindmapConfig.type.toLocaleLowerCase();
+      console.log("type",type);
+
       var text = $svg.data("svg-text");
+      console.log("text",text);
+
       var data;
       switch (type) {
           case "markdown":
@@ -49,6 +59,8 @@ var entry = function entry() {
               data = transform(parse(text));
               break; 
       } 
+      console.log("data",data);
+      
       if(data){
         markmap($svg[0], data, simplemindmapConfig);
       }
