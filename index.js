@@ -24,17 +24,15 @@ module.exports = {
             process: function process(block) {
                 var pluginConfig = this.options.pluginsConfig["simple-mind-map"] || {};
                 var blockConfig = block || {};
-                var styleConfig = Object.assign(pluginConfig, blockConfig.kwargs);
+                var styleConfig = Object.assign(pluginConfig.style || {}, blockConfig.kwargs.style || {});
                 var customStyle = '';
                 if(styleConfig){
                     for (var style in styleConfig) { 
                         if (Object.prototype.hasOwnProperty.call(styleConfig, style)) { 
-                            customStyle = style + ": " + styleConfig[style] + ";"
+                            customStyle += style + ": " + styleConfig[style] + ";";
                         } 
                     }
                 }
-                console.log(styleConfig);
-                console.log(customStyle);
 
                 var rawBody = block.body;
                 var result,text;
