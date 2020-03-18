@@ -21,7 +21,7 @@
 ## 屏幕截图
 
 ````markdown
-{% simplemindmap %}
+{% simplemindmap style={"height":"200px"} %}
 ```markdown
 * simplemindmap
     * config book.json
@@ -50,7 +50,33 @@
 {% endsimplemindmap %}
 ````
 
-![simple-mind-map-index-use-preview.png](simple-mind-map-index-use-preview.png)
+{% simplemindmap style={"height":"200px"} %}
+```markdown
+* simplemindmap
+    * config book.json
+        * plugins
+            * others
+            * simple-mind-map
+        * pluginsConfig
+            * others
+            * simple-mind-map
+                * type
+                * preset
+                * linkShape
+                * autoFit
+                * style
+    * custom file.md
+        * markdown
+            * type
+            * preset
+            * linkShape
+            * autoFit
+            * style
+        * txtmap
+        * json
+        * mindmup
+```
+{% endsimplemindmap %}
 
 ## 用法
 
@@ -1307,6 +1333,12 @@ gitbook serve
 
 **注意** ：如果您的书还没有创建,以上代码段可以用作完整的 `book.json` 文件.
 
+## 致谢
+
+- Visualize markdown documents as mindmaps : [https://github.com/dundalek/markmap](https://github.com/dundalek/markmap)
+- A GitBook plugin for generating mindmaps within Markdown : [https://github.com/aleen42/gitbook-mindmaps](https://github.com/aleen42/gitbook-mindmaps)
+- Export SVG with Style : [https://chrome.google.com/webstore/detail/export-svg-with-style/dkjdcaddoplepioppogpckelchefhddi](https://chrome.google.com/webstore/detail/export-svg-with-style/dkjdcaddoplepioppogpckelchefhddi)
+
 ## 作者
 
 👤 **snowdreams1006**
@@ -1321,7 +1353,7 @@ gitbook serve
 
 ## 表示支持
 
-如果这个项目对您有帮助，请给个[**星星**](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map) ！
+如果这个项目对您有帮助，请给个[星星](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map) ！
 
 ## 版权
 

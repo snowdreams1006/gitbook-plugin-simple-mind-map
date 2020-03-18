@@ -50,7 +50,33 @@
 {% endsimplemindmap %}
 ````
 
-![simple-mind-map-index-use-preview.png](simple-mind-map-index-use-preview.png)
+{% simplemindmap %}
+```markdown
+* simplemindmap
+    * config book.json
+        * plugins
+            * others
+            * simple-mind-map
+        * pluginsConfig
+            * others
+            * simple-mind-map
+                * type
+                * preset
+                * linkShape
+                * autoFit
+                * style
+    * custom file.md
+        * markdown
+            * type
+            * preset
+            * linkShape
+            * autoFit
+            * style
+        * txtmap
+        * json
+        * mindmup
+```
+{% endsimplemindmap %}
 
 ## Usage
 
@@ -1318,6 +1344,12 @@ or you can add `style` to custom your style of mind map:
 
 **Note**: Above snippet can be used as complete `book.json` file, if your book doesn't have one yet.
 
+## Thanks
+
+- Visualize markdown documents as mindmaps : [https://github.com/dundalek/markmap](https://github.com/dundalek/markmap)
+- A GitBook plugin for generating mindmaps within Markdown : [https://github.com/aleen42/gitbook-mindmaps](https://github.com/aleen42/gitbook-mindmaps)
+- Export SVG with Style : [https://chrome.google.com/webstore/detail/export-svg-with-style/dkjdcaddoplepioppogpckelchefhddi](https://chrome.google.com/webstore/detail/export-svg-with-style/dkjdcaddoplepioppogpckelchefhddi)
+
 ## Author
 
 👤 **snowdreams1006**
@@ -1332,7 +1364,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ## Show your support
 
-Give a [**Star**](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map) if this project helped you!
+Give a [Star](https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map) if this project helped you!
 
 ## Copyright
 
