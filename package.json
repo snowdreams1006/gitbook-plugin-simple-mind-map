@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-readmore",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Gitbook 整合 OpenWrite 平台的 readmore 插件,实现博客的每一篇文章自动增加阅读更多效果,关注公众号后方可解锁全站文章,从而实现博客流量导流到微信公众号粉丝目的.",
   "main": "index.js",
   "engines": {
@@ -8,16 +8,6 @@
   },
   "gitbook": {
     "properties": {
-      "allowDomain": {
-        "type": [
-          "boolean",
-          "array"
-        ],
-        "required": false,
-        "default": "localhost",
-        "title": "允许域名",
-        "description": "允许域名生效,例如:localhost"
-      },
       "id": {
         "type": "string",
         "required": false,
@@ -48,26 +38,6 @@
         "required": true,
         "title": "微信公众号回复关键字",
         "description": "OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip"
-      },
-      "btnText": {
-        "type": "string",
-        "required": false,
-        "default": "阅读全文",
-        "title": "阅读全文",
-        "description": "可以用来修改“阅读全文”的描述，使用更好的提示内容，让用户不那么反感"
-      },
-      "cookieAge": {
-        "type": "number",
-        "required": false,
-        "title": "过期时间",
-        "description": "验证后的过期时间（单位：小时），上面设置为1的时候，用户验证后1小时之内不用再验证，超过之后则需要重新验证"
-      },
-      "displayPercentage": {
-        "type": "number",
-        "required": false,
-        "default": 0.3,
-        "title": "试读比例",
-        "description": "显示文章内容的百分比，上面设置的0.4，那么会展示文章的40%，隐藏60%"
       }
     }
   },
