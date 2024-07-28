@@ -11,12 +11,12 @@ module.exports = {
             this.log.debug.ln('page', JSON.stringify(page.content));
 
             if (readmoreConfig) {
-                readmoreConfig.id = 'vip-container';
+                readmoreConfig.id = 'container';
                 var str = `
-                <div id="vip-container">
+                <div id="container">
                     ${page.content}
                 </div>
-                <script src="https://my.openwrite.cn/js/readmore.js"></script>
+                <script src="https://readmore.openwrite.cn/js/readmore-2.0.js" type="text/javascript"></script>
                 <script>
                     var enablePlugin = false;
                     var allowDomain = ${JSON.stringify(readmoreConfig.allowDomain)};
@@ -39,6 +39,12 @@ module.exports = {
                     }
                     
                     if(enablePlugin){
+                        var allowMobile = ${JSON.stringify(readmoreConfig.allowMobile)};
+                        if(allowDomain){
+
+                        }
+
+
                         var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
                         if (!isMobile) {
                             var btw = new BTWPlugin();

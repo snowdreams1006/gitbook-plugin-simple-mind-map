@@ -10,13 +10,25 @@
     "properties": {
       "allowDomain": {
         "type": [
-          "string",
+          "boolean",
           "array"
         ],
         "required": false,
         "default": "localhost",
         "title": "允许域名",
         "description": "允许域名生效,例如:localhost"
+      },
+      "allowMobile": {
+        "type": "boolean",
+        "required": false,
+        "title": "允许移动端",
+        "description": "是否允许移动端开启阅读更多效果"
+      },
+      "id": {
+        "type": "string",
+        "required": false,
+        "title": "容器id",
+        "description": "文章容器id"
       },
       "blogId": {
         "type": "string",
@@ -41,6 +53,24 @@
         "required": true,
         "title": "微信公众号回复关键字",
         "description": "OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip"
+      },
+      "btnText": {
+        "type": "string",
+        "required": false,
+        "title": "阅读原文",
+        "description": "可以用来修改“阅读原文”的描述，使用更好的提示内容，让用户不那么反感"
+      },
+      "cookieAge": {
+        "type": "number",
+        "required": false,
+        "title": "过期时间",
+        "description": "验证后的过期时间（单位：小时），上面设置为1的时候，用户验证后1小时之内不用再验证，超过之后则需要重新验证"
+      },
+      "displayPercentage": {
+        "type": "number",
+        "required": false,
+        "title": "试读比例",
+        "description": "显示文章内容的百分比，上面设置的0.4，那么会展示文章的40%，隐藏60%"
       }
     }
   },
