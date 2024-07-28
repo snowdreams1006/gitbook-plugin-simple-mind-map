@@ -54,6 +54,7 @@
     
     
     
+    
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -74,6 +75,33 @@
     <script>
         window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"snowdreams1006","repo":"gitbook-plugin-readmore","type":"star","size":"small"}]};
     </script>
+
+    
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    
+        <link rel="bookmark" href="/bookmark.ico" type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152.png">
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-precomposed-152.png">
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png">
+        
+    
+    
+        
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-precomposed-120.png">
+        
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-precomposed-180.png">
+        
+    
 
     </head>
     <body>
@@ -349,10 +377,32 @@
                 </div>
                 <script src="https://my.openwrite.cn/js/readmore.js"></script>
                 <script>
-                    var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
-                    if (!isMobile) {
-                        var btw = new BTWPlugin();
-                        btw.init({"blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip","id":"vip-container"});
+                    var enablePlugin = false;
+                    var allowDomain = "localhost";
+                    if(allowDomain){
+                        var currentDomain = location.hostname;
+                        if ($.isArray(allowDomain)) {
+                            $.each(allowDomain, function(index, item) {
+                                if (currentDomain == item) {
+                                    enablePlugin = true;
+                                    return false;
+                                }
+                            });
+                        }else{
+                           if (currentDomain == allowDomain) {
+                                enablePlugin = true;
+                            }
+                        }
+                    }else{
+                        enablePlugin = true;
+                    }
+                    
+                    if(enablePlugin){
+                        var isMobile = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);
+                        if (!isMobile) {
+                            var btw = new BTWPlugin();
+                            btw.init({"allowDomain":"localhost","blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip","id":"vip-container"});
+                        }
                     }
                 </script>
                                 
@@ -389,7 +439,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"gitbook-official","level":"1.2","depth":1,"url":"https://snowdreams1006.github.io/gitbook-official/","ref":"https://snowdreams1006.github.io/gitbook-official/","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon-custom","github-buttons","edit-link","readmore","copyright","mygitalk"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"copyright":{"site":"https://snowdreams1006.github.io/gitbook-plugin-readmore","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"search":{},"favicon-custom":{"appleTouchIconPrecomposed152":"./favicon.ico","favicon":"./favicon.ico"},"readmore":{"blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"favicon.ico","appleTouchIconPrecomposed152":"apple-touch-icon-precomposed-152.png","github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"gitbook-plugin-readmore","type":"star","size":"small"}]},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-plugin-readmore","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"编辑本页","base":"https://github.com/snowdreams1006/gitbook-plugin-readmore/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"readmore 插件官方文档","language":"zh-hans","links":{"sidebar":{"snowdreams1006":"https://snowdreams1006.github.io/"}},"gitbook":"3.2.3","description":"gitbook-plugin-readmore 插件官方文档"},"file":{"path":"README.md","mtime":"2019-11-12T08:18:56.643Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-23T03:06:56.045Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"gitbook-official","level":"1.2","depth":1,"url":"https://snowdreams1006.github.io/gitbook-official/","ref":"https://snowdreams1006.github.io/gitbook-official/","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon-absolute","github-buttons","edit-link-plus","readmore","copyright","mygitalk"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"copyright":{"copyProtect":true,"site":"https://snowdreams1006.github.io/gitbook-plugin-readmore","author":"雪之梦技术驿站","website":"雪之梦技术驿站","image":"https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"},"search":{},"edit-link-plus":{"label":"编辑本页","base":"https://github.com/snowdreams1006/gitbook-plugin-readmore/blob/master"},"readmore":{"allowDomain":"localhost","blogId":"15702-1569305559839-744","name":"雪之梦技术驿站","qrcode":"https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg","keyword":"vip"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"favicon-absolute":{"appleTouchIconMore":{"120x120":"/apple-touch-icon-120.png","180x180":"/apple-touch-icon-180.png"},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{"120x120":"/apple-touch-icon-precomposed-120.png","180x180":"/apple-touch-icon-precomposed-180.png"},"favicon":"/favicon.ico","bookmark":"/bookmark.ico","appleTouchIcon152":"/apple-touch-icon-152.png"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"snowdreams1006","repo":"gitbook-plugin-readmore","type":"star","size":"small"}]},"mygitalk":{"flipMoveOptions":{},"clientID":"3f62415a283d19cbd696","number":-1,"perPage":10,"proxy":"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token","admin":["snowdreams1006"],"createIssueManually":false,"distractionFreeMode":false,"repo":"gitbook-plugin-readmore","owner":"snowdreams1006","enableHotKey":true,"clientSecret":"aed0e1db0620bf5d0e3a3f0225f801997ad74e58","pagerDirection":"last","labels":["Gitalk"]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"snowdreams1006","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"readmore 插件官方文档","language":"zh-hans","links":{"sidebar":{"snowdreams1006":"https://snowdreams1006.github.io/"}},"gitbook":"3.2.3","description":"gitbook-plugin-readmore 插件官方文档"},"file":{"path":"README.md","mtime":"2024-07-28T02:52:42.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-28T17:08:45.080Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -403,11 +453,11 @@
         
     
         
-        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        <script src="gitbook/gitbook-plugin-edit-link-plus/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-copyright/copyright.js"></script>
+        <script src="gitbook/gitbook-plugin-copyright/plugin.js"></script>
         
     
         

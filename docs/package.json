@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gitbook-plugin-mygitalk": "^0.2.6"
+  }
+}
