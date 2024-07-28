@@ -18,13 +18,6 @@
         "title": "允许域名",
         "description": "允许域名生效,例如:localhost"
       },
-      "allowMobile": {
-        "type": "boolean",
-        "required": false,
-        "default": false,
-        "title": "允许移动端",
-        "description": "是否允许移动端开启阅读更多效果"
-      },
       "id": {
         "type": "string",
         "required": false,
