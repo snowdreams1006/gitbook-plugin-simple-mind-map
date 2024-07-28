@@ -15,32 +15,10 @@ module.exports = {
                 <div id="container">
                     ${page.content}
                 </div>
-                <script src="https://readmore.openwrite.cn/js/readmore-2.0.js" type="text/javascript"></script>
+                <script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
                 <script>
-                    var enablePlugin = false;                    
-                    var allowDomain = ${JSON.stringify(readmoreConfig.allowDomain)};
-                    if(allowDomain){
-                        var currentDomain = location.hostname;
-                        if ($.isArray(allowDomain)) {
-                            $.each(allowDomain, function(index, item) {
-                                if (currentDomain == item) {
-                                    enablePlugin = true;
-                                    return false;
-                                }
-                            });
-                        }else{
-                           if (currentDomain == allowDomain) {
-                                enablePlugin = true;
-                            }
-                        }
-                    }else{
-                        enablePlugin = true;
-                    }
-                    
-                    if(enablePlugin){
-                        var btw = new BTWPlugin();
-                        btw.init(${JSON.stringify(readmoreConfig)});
-                    }
+                    const btw = new BTWPlugin();
+                    btw.init(${JSON.stringify(readmoreConfig)});
                 </script>`;
 
                 page.content = str;
