@@ -49,6 +49,20 @@
 - `qrcode` : [必选]OpenWrite 后台申请的微信公众号二维码,例如:https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg
 - `keyword` : [必选]OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip
 
+```js
+<script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+<script>
+    const btw = new BTWPlugin();
+    btw.init({
+        id: 'container',
+        blogId: '15702-1569305559839-744',
+        name: '雪之梦技术驿站',
+        qrcode: 'https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg',
+        keyword: 'vip',
+    });
+</script>
+```
+
 ### Step #2 - 运行 gitbook 相关命令
 
 - 运行 `gitbook install` 命令安装到本地项目
