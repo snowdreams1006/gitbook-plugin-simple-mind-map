@@ -11,6 +11,11 @@ module.exports = {
             this.log.debug.ln('page', JSON.stringify(page.content));
 
             if (readmoreConfig) {
+                var container = readmoreConfig.id;
+                if(container == undefined){
+                    container = ""
+                }
+
                 readmoreConfig.id = 'container';
                 var str = `
                 <div id="container">

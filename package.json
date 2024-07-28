@@ -21,12 +21,14 @@
       "allowMobile": {
         "type": "boolean",
         "required": false,
+        "default": false,
         "title": "允许移动端",
         "description": "是否允许移动端开启阅读更多效果"
       },
       "id": {
         "type": "string",
         "required": false,
+        "default": "container",
         "title": "容器id",
         "description": "文章容器id"
       },
@@ -57,8 +59,9 @@
       "btnText": {
         "type": "string",
         "required": false,
-        "title": "阅读原文",
-        "description": "可以用来修改“阅读原文”的描述，使用更好的提示内容，让用户不那么反感"
+        "default": "阅读全文",
+        "title": "阅读全文",
+        "description": "可以用来修改“阅读全文”的描述，使用更好的提示内容，让用户不那么反感"
       },
       "cookieAge": {
         "type": "number",
@@ -69,6 +72,7 @@
       "displayPercentage": {
         "type": "number",
         "required": false,
+        "default": 0.3,
         "title": "试读比例",
         "description": "显示文章内容的百分比，上面设置的0.4，那么会展示文章的40%，隐藏60%"
       }
