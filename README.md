@@ -52,7 +52,7 @@
 ```js
 <script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
 <script>
-    const btw = new BTWPlugin();
+    var btw = new BTWPlugin();
     btw.init({
         id: 'container',
         blogId: '15702-1569305559839-744',
