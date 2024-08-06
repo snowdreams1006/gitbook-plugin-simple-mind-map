@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# status latest 
+git status
+
+# pull latest 
+git pull
+
 # prepare for generate docs
 cd docs
 
@@ -20,3 +26,6 @@ git commit -m "auto deploy website"
 
 # push to github and others
 git push origin master
+
+# status latest 
+git status
