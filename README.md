@@ -3,8 +3,6 @@
 [![npm:version](https://img.shields.io/npm/v/gitbook-plugin-readmore.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
 [![npm:download](https://img.shields.io/npm/dt/gitbook-plugin-readmore.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
 [![npm:prerequisite](https://img.shields.io/badge/gitbook-%3E%3D2.4.3-blue.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
-[![github:documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/snowdreams1006/gitbook-plugin-readmore#readme)
-[![github:maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/snowdreams1006/gitbook-plugin-readmore/graphs/commit-activity)
 [![npm:license](https://img.shields.io/npm/l/gitbook-plugin-readmore.svg)](https://github.com/snowdreams1006/gitbook-plugin-readmore/blob/master/LICENSE)
 [![github:snodreams1006](https://img.shields.io/badge/github-snowdreams1006-brightgreen.svg)](https://github.com/snowdreams1006)
 [![微信公众号:雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg)
