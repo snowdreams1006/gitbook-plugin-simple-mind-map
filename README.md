@@ -1,4 +1,4 @@
-# 欢迎访问 gitbook-plugin-readmore 官网 👋
+# 欢迎访问 [gitbook-plugin-readmore](https://github.com/snowdreams1006/gitbook-plugin-readmore#readme) 官网 👋
 
 [![npm:version](https://img.shields.io/npm/v/gitbook-plugin-readmore.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
 [![npm:download](https://img.shields.io/npm/dt/gitbook-plugin-readmore.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
@@ -10,12 +10,6 @@
 [![微信公众号:雪之梦技术驿站-brightgreen.svg](https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7-%E9%9B%AA%E4%B9%8B%E6%A2%A6%E6%8A%80%E6%9C%AF%E9%A9%BF%E7%AB%99-brightgreen.svg)](https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg)
 
 > Gitbook 整合 OpenWrite 平台的 readmore 插件,实现博客的每一篇文章自动增加阅读更多效果,关注公众号后方可解锁全站文章,从而实现博客流量导流到微信公众号粉丝目的.
-
-### 🏠 [主页](https://github.com/snowdreams1006/gitbook-plugin-readmore#readme)
-
-- Github : [https://snowdreams1006.github.io/gitbook-plugin-readmore/](https://snowdreams1006.github.io/gitbook-plugin-readmore/)
-- Gitee : [https://snowdreams1006.gitee.io/gitbook-plugin-readmore/](https://snowdreams1006.gitee.io/gitbook-plugin-readmore/)
-- GitLab: [https://snowdreams1006.gitlab.io/gitbook-plugin-readmore/](https://snowdreams1006.gitlab.io/gitbook-plugin-readmore/)
 
 ## 效果
 
@@ -48,20 +42,6 @@
 - `name` : [必选]OpenWrite 后台申请的博客名称,例如:雪之梦技术驿站
 - `qrcode` : [必选]OpenWrite 后台申请的微信公众号二维码,例如:https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg
 - `keyword` : [必选]OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip
-
-```js
-<script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
-<script>
-    var btw = new BTWPlugin();
-    btw.init({
-        id: 'container',
-        blogId: '15702-1569305559839-744',
-        name: '雪之梦技术驿站',
-        qrcode: 'https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg',
-        keyword: 'vip',
-    });
-</script>
-```
 
 ### Step #2 - 运行 gitbook 相关命令
 
