@@ -1,4 +1,4 @@
-# 欢迎访问 [gitbook-plugin-readmore](https://github.com/snowdreams1006/gitbook-plugin-readmore#readme) 官网 👋
+# 欢迎访问 [gitbook-plugin-readmore](https://snowdreams1006.github.io/gitbook-plugin-readmore/) 官网 👋
 
 [![npm:version](https://img.shields.io/npm/v/gitbook-plugin-readmore.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
 [![npm:download](https://img.shields.io/npm/dt/gitbook-plugin-readmore.svg)](https://www.npmjs.com/package/gitbook-plugin-readmore)
