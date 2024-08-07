@@ -13,7 +13,7 @@ cd docs
 rm -rf _book/ && gitbook build
 
 # copy to docs
-cp -rf _book/ .
+cp -rf _book/* ./
 
 # prepare for push 
 cd ..
