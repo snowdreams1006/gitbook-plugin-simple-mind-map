@@ -15,10 +15,11 @@ module.exports = {
                 <div id="container">
                     ${page.content}
                 </div>
-                <script src="https://readmore.openwrite.cn/js/readmore.js" type="text/javascript"></script>
+                <script src="https://blog.snowdreams1006.cn/assets/js/readmore.js" type="text/javascript"></script>
                 <script>
                     const btw = new BTWPlugin();
-                    btw.init(${JSON.stringify(readmoreConfig)});
+                    let readmoreConfig = ${JSON.stringify(readmoreConfig)};
+                    btw.init(readmoreConfig);
                 </script>`;
 
                 page.content = str;
