@@ -11,11 +11,8 @@
     },
     "plugins": [
         "favicon-absolute",
-        "github-buttons",
-        "edit-link-plus",
         "readmore",
-        "copyright",
-        "mygitalk"
+        "copyright"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -32,18 +29,6 @@
                 "180x180": "/apple-touch-icon-precomposed-180.png"
             }
         },
-        "github-buttons": {
-            "buttons": [{
-                "user": "snowdreams1006",
-                "repo": "gitbook-plugin-readmore",
-                "type": "star",
-                "size": "small"
-            }]
-        },
-        "edit-link-plus": {
-            "base": "https://github.com/snowdreams1006/gitbook-plugin-readmore/blob/master",
-            "label": "编辑本页"
-        },
         "readmore": {
             "blogId": "15702-1569305559839-744",
             "name": "雪之梦技术驿站",
@@ -55,14 +40,6 @@
             "author": "雪之梦技术驿站",
             "website": "雪之梦技术驿站",
             "image": "https://snowdreams1006.github.io/snowdreams1006-wechat-open.png"
-        },
-        "mygitalk": {
-            "clientID": "3f62415a283d19cbd696",
-            "clientSecret": "aed0e1db0620bf5d0e3a3f0225f801997ad74e58",
-            "repo": "gitbook-plugin-readmore",
-            "owner": "snowdreams1006",
-            "admin": ["snowdreams1006"],
-            "distractionFreeMode": false
         }
     }
 }
