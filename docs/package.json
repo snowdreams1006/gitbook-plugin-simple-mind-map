@@ -1,5 +1,15 @@
 {
   "dependencies": {
-    "gitbook-plugin-mygitalk": "^0.2.6"
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-copy-code-button": "^0.0.2",
+    "gitbook-plugin-copyright": "^0.4.1",
+    "gitbook-plugin-diff": "^0.1.0",
+    "gitbook-plugin-edit-link-plus": "^0.1.1",
+    "gitbook-plugin-favicon-absolute": "^0.1.1",
+    "gitbook-plugin-icp": "^0.2.1",
+    "gitbook-plugin-last-update-time": "^1.1.5",
+    "gitbook-plugin-multilingual-index": "^1.0.3",
+    "gitbook-plugin-readmore": "^1.3.1",
+    "gitbook-plugin-simple-mind-map": "^0.2.4"
   }
 }

@@ -1,66 +1,82 @@
 {
-  "name": "gitbook-plugin-readmore",
-  "version": "1.2.0",
-  "description": "Gitbook 整合 OpenWrite 平台的 readmore 插件,实现博客的每一篇文章自动增加阅读更多效果,关注公众号后方可解锁全站文章,从而实现博客流量导流到微信公众号粉丝目的.",
-  "main": "index.js",
-  "engines": {
-    "gitbook": ">=2.4.3"
-  },
-  "gitbook": {
-    "properties": {
-      "id": {
-        "type": "string",
-        "required": false,
-        "default": "container",
-        "title": "容器id",
-        "description": "文章容器id"
-      },
-      "blogId": {
-        "type": "string",
-        "required": true,
-        "title": "博客id",
-        "description": "OpenWrite 后台申请的博客唯一标识,例如:15702-1569305559839-744"
-      },
-      "name": {
-        "type": "string",
-        "required": true,
-        "title": "博客名称",
-        "description": "OpenWrite 后台申请的博客名称,例如:雪之梦技术驿站"
-      },
-      "qrcode": {
-        "type": "string",
-        "required": true,
-        "title": "微信公众号二维码",
-        "description": "OpenWrite 后台申请的微信公众号二维码,例如:https://snowdreams1006.github.io/snowdreams1006-wechat-public.jpeg"
-      },
-      "keyword": {
-        "type": "string",
-        "required": true,
-        "title": "微信公众号回复关键字",
-        "description": "OpenWrite 后台申请的微信公众号后台回复关键字,例如:vip"
-      }
+    "name": "gitbook-plugin-simple-mind-map",
+    "version": "0.2.4",
+    "description": "A gitBook plugin for generating and exporting mind map within markdown",
+    "private": false,
+    "main": "index.js",
+    "scripts": {
+        "start": "cd docs && gitbook serve",
+        "dev": "npx webpack --colors --watch",
+        "prod": "npx webpack --colors --optimize-minimize",
+        "build": "npx webpack"
+    },
+    "engines": {
+        "gitbook": "*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map.git"
+    },
+    "keywords": [
+        "gitbook-plugin-simple-mind-map",
+        "gitbook-plugin",
+        "simple-mind-map",
+        "visualization",
+        "mindmap",
+        "ideamap",
+        "markdown",
+        "svg",
+        "canvas"
+    ],
+    "gitbook": {
+        "properties": {
+            "type": {
+                "type": "string",
+                "title": "Markdown or MindMup or Txtmap or Pandoc",
+                "required": false,
+                "default": "markdown"
+            },
+            "preset": {
+                "type": "string",
+                "title": "colorful or default",
+                "required": false,
+                "default": "default"
+            },
+            "linkShape": {
+                "type": "string",
+                "title": "diagonal or bracket",
+                "required": false,
+                "default": "diagonal"
+            },
+            "autoFit": {
+                "type": "boolean",
+                "title": "true or false",
+                "required": false,
+                "default": true
+            },
+            "style": {
+                "type": "object",
+                "title": "custom style",
+                "required": false
+            }
+        }
+    },
+    "author": {
+        "name": "snowdreams1006",
+        "email": "snowdreams1006@163.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/snowdreams1006/gitbook-plugin-simple-mind-map/issues"
+    },
+    "homepage": "https://snowdreams1006.github.io/gitbook-plugin-simple-mind-map/",
+    "dependencies": {
+        "markmap": "^0.6.1"
+    },
+    "devDependencies": {
+        "css-loader": "^3.4.2",
+        "style-loader": "^1.1.3",
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.11"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/snowdreams1006/gitbook-plugin-readmore.git"
-  },
-  "keywords": [
-    "gitbook-plugin-readmore",
-    "gitbook-plugin-openwrite",
-    "readmore",
-    "openwrite",
-    "vip",
-    "github",
-    "opensource"
-  ],
-  "author": {
-    "name": "snowdreams1006",
-    "email": "snowdreams1006@163.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/snowdreams1006/gitbook-plugin-readmore/issues"
-  },
-  "homepage": "https://snowdreams1006.github.io/gitbook-plugin-readmore/"
 }
